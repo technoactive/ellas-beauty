@@ -6,16 +6,67 @@ export const SITE = {
   locale: "en_GB",
   language: "en-GB",
   tagline: "Let your eyes do the talking.",
+  strapline: "Your lash, brow, skin specialist & make-up artist.",
   description:
-    "Luxury lashes, brows, makeup and skin treatments in West Hampstead. Bespoke artistry by Ella, with salon and mobile appointments across London.",
+    "Award-winning luxury lashes, brows, skin and makeup in West Hampstead. Over 8 years of bespoke artistry by Ella using organic Russian-made products, in salon or mobile at your address.",
   email: "hello@ellas-beauty.co.uk",
   bookingUrl:
     "https://www.fresha.com/en-GB/a/ellas-beauty-london-rush-hair-west-hampstead-186-188-west-end-lane-qq4f1g83?pId=1332797",
   rating: 4.9,
   reviewCount: 79,
-  sameAs: [] as string[],
+  social: {
+    instagram: {
+      label: "Instagram",
+      handle: "@iamellasbeauty",
+      url: "https://www.instagram.com/iamellasbeauty",
+    },
+    whatsapp: {
+      label: "WhatsApp",
+      handle: "Message Ella",
+      url: "https://wa.me/message/DYHVAGLHIMPIM1",
+    },
+    google: {
+      label: "Google",
+      handle: "Ella’s Beauty on Google",
+      url: "https://www.google.com/maps/search/?api=1&query=Ella%E2%80%99s%20Beauty%20Rush%20Hair%20West%20Hampstead%20186-188%20West%20End%20Lane%20NW6%201SG",
+    },
+  },
+  sameAs: [
+    "https://www.instagram.com/iamellasbeauty",
+    "https://www.fresha.com/en-GB/a/ellas-beauty-london-rush-hair-west-hampstead-186-188-west-end-lane-qq4f1g83",
+  ],
+  founder: {
+    name: "Ella",
+    role: "Lash, brow & skin specialist and make-up artist",
+    yearsExperience: 8,
+    intro:
+      "My name is Ella and I specialise in luxury lash, brow, skin and makeup services using the highest-quality organic Russian-made products — for over 8 years.",
+    training:
+      "I trained at the Beauty Academy, then developed my craft through 4 further courses and 6 masterclasses.",
+    promise:
+      "Whether you are looking for a bold new look or a subtle enhancement, I bring precision, artistry and luxury to every appointment.",
+    products: "Highest-quality organic Russian-made products",
+    coursesCompleted: 4,
+    masterclassesCompleted: 6,
+  },
+  awards: [
+    { year: "2019", title: "Health & Beauty Awards", detail: "Winner" },
+    { year: "2021", title: "Health & Beauty Awards", detail: "Winner" },
+    { year: "2022", title: "Innovative Lash Creator of the Year", detail: "Winner" },
+    { year: "2023", title: "BABTAC & CIBTAC Awards", detail: "Winner" },
+  ],
+  policies: [
+    "Arriving more than 15 minutes late will result in the appointment being cancelled.",
+    "All clients must arrive with clean lashes and no makeup or mascara on.",
+    "Infills require a minimum of 50% of lashes remaining and must be booked within 1–3 weeks of your last appointment.",
+    "Infills are not carried out on another technician’s work — a removal and a new set are required.",
+    "Please do not wear contact lenses during your appointment.",
+    "Please give 48 hours’ notice if you wish to cancel or reschedule.",
+    "For mobile appointments at your own address, please contact us first.",
+  ],
+  locationNote: "Rush Salon, 186-188 West End Lane, NW6 1SG — or mobile, at your own address.",
   address: {
-    street: "Rush Hair West Hampstead, 186-188 West End Lane",
+    street: "Rush Salon, 186-188 West End Lane",
     locality: "London",
     region: "Greater London",
     postalCode: "NW6 1SG",
@@ -33,13 +84,18 @@ export const SITE = {
   mapsEmbed:
     "https://www.google.com/maps?q=186-188+West+End+Lane,+London+NW6+1SG&output=embed",
   openingHours: [
-    { day: "Monday", hours: "10:00 – 23:00", schema: "Mo 10:00-23:00" },
-    { day: "Tuesday", hours: "10:00 – 23:00", schema: "Tu 10:00-23:00" },
-    { day: "Wednesday", hours: "10:00 – 23:00", schema: "We 10:00-23:00" },
-    { day: "Thursday", hours: "10:00 – 23:00", schema: "Th 10:00-23:00" },
-    { day: "Friday", hours: "10:00 – 23:00", schema: "Fr 10:00-23:00" },
+    { day: "Monday", hours: "10:00 – 22:00", schema: "Mo 10:00-22:00" },
+    { day: "Tuesday", hours: "10:00 – 22:00", schema: "Tu 10:00-22:00" },
+    { day: "Wednesday", hours: "10:00 – 22:00", schema: "We 10:00-22:00" },
+    { day: "Thursday", hours: "10:00 – 22:00", schema: "Th 10:00-22:00" },
+    { day: "Friday", hours: "10:00 – 22:00", schema: "Fr 10:00-22:00" },
     { day: "Saturday", hours: "10:00 – 20:00", schema: "Sa 10:00-20:00" },
-    { day: "Sunday", hours: "10:00 – 18:00", schema: "Su 10:00-18:00" },
+    { day: "Sunday", hours: "12:00 – 18:00", schema: "Su 12:00-18:00" },
+  ],
+  openingHoursCompact: [
+    { day: "Mon – Fri", hours: "10am – 10pm" },
+    { day: "Saturday", hours: "10am – 8pm" },
+    { day: "Sunday", hours: "12pm – 6pm" },
   ],
   amenities: [
     "Woman-owned",

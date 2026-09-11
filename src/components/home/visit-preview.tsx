@@ -9,10 +9,9 @@ export function VisitPreview() {
         <div className="lg:col-span-5">
           <Eyebrow>Visit</Eyebrow>
           <h2 className="mt-5 font-serif text-4xl leading-[1.02] sm:text-6xl">
-            West Hampstead,
+            Rush Salon, West Hampstead
             <br />
-            Beckton, <span className="gold-text italic">or</span> your living
-            room.
+            <span className="gold-text italic">or</span> your own address.
           </h2>
           <address className="mt-8 font-serif text-2xl not-italic leading-snug text-ink-soft">
             {SITE.address.street}
@@ -54,7 +53,7 @@ export function VisitPreview() {
               <dt className="text-[0.62rem] tracking-[0.3em] text-gold-deep uppercase">
                 Mobile
               </dt>
-              <dd className="font-serif text-xl text-ink">By arrangement</dd>
+              <dd className="font-serif text-xl text-ink">Contact us first</dd>
             </div>
           </dl>
           <div className="gold-frame mt-6">

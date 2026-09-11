@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Logo } from "@/components/brand/logo";
+import { SocialLinks } from "@/components/brand/social-links";
 import { BookButton } from "@/components/ui/book-button";
 import { Container } from "@/components/ui/section";
 import { NAV, SITE } from "@/lib/site";
@@ -9,7 +10,7 @@ const secondary = [
   { href: "/book", label: "Book" },
   { href: "/privacy", label: "Privacy" },
   { href: "/cookies", label: "Cookies" },
-  { href: "/terms", label: "Terms" },
+  { href: "/terms", label: "Terms & policies" },
 ];
 
 export function Footer() {
@@ -19,12 +20,17 @@ export function Footer() {
       <Container className="grid gap-14 py-20 lg:grid-cols-12">
         <div className="lg:col-span-5">
           <Logo size="lg" className="items-start" />
-          <p className="mt-8 max-w-sm text-sm leading-7 text-muted">
-            Bespoke lashes, brows, makeup and skin in West Hampstead, with
-            mobile appointments across London. Woman-owned. Detail-led.
+          <p className="mt-4 font-serif text-xl italic text-gold-deep">
+            {SITE.strapline}
           </p>
-          <div className="mt-8">
+          <p className="mt-5 max-w-sm text-sm leading-7 text-muted">
+            Award-winning lashes, brows, skin and makeup in West Hampstead, or
+            mobile at your own address. Over 8 years of precision, artistry and
+            luxury.
+          </p>
+          <div className="mt-8 flex flex-wrap items-center gap-5">
             <BookButton />
+            <SocialLinks />
           </div>
         </div>
 
@@ -55,18 +61,41 @@ export function Footer() {
               {SITE.address.street}
               <br />
               {SITE.address.locality} {SITE.address.postalCode}
+              <br />
+              <span className="text-muted">or mobile, at your own address</span>
             </p>
             <p>
               <a className="hover:text-gold-deep" href={`mailto:${SITE.email}`}>
                 {SITE.email}
               </a>
-            </p>
-            <p className="text-muted">
-              West Hampstead Thameslink · 2 minutes
               <br />
-              Also Beckton &amp; mobile London
+              <a
+                className="hover:text-gold-deep"
+                href={SITE.social.whatsapp.url}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                WhatsApp Ella
+              </a>
+              {" · "}
+              <a
+                className="hover:text-gold-deep"
+                href={SITE.social.instagram.url}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {SITE.social.instagram.handle}
+              </a>
             </p>
           </address>
+          <dl className="mt-6 space-y-1.5 text-sm text-ink-soft">
+            {SITE.openingHoursCompact.map((row) => (
+              <div key={row.day} className="flex justify-between gap-4 border-b border-gold/25 pb-1.5">
+                <dt className="text-[0.62rem] tracking-[0.26em] text-muted uppercase">{row.day}</dt>
+                <dd className="font-serif text-base">{row.hours}</dd>
+              </div>
+            ))}
+          </dl>
           <ul className="mt-8 flex flex-wrap gap-x-5 gap-y-2">
             {secondary.map((item) => (
               <li key={item.href}>
@@ -87,7 +116,7 @@ export function Footer() {
           <p>
             © {new Date().getFullYear()} {SITE.name}
           </p>
-          <p>Lashes · Brows · Makeup · Skin — London NW6</p>
+          <p>Lashes · Brows · Skin · Makeup — London NW6</p>
         </Container>
       </div>
     </footer>

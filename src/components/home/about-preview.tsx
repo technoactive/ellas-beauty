@@ -3,7 +3,7 @@ import Link from "next/link";
 import { BlurFade } from "@/components/magicui/blur-fade";
 import { BookButton } from "@/components/ui/book-button";
 import { Container, Eyebrow, Section } from "@/components/ui/section";
-import { IMAGES } from "@/lib/site";
+import { IMAGES, SITE } from "@/lib/site";
 
 export function AboutPreview() {
   return (
@@ -38,26 +38,33 @@ export function AboutPreview() {
         <BlurFade delay={0.15} className="lg:col-span-6 lg:col-start-7">
           <Eyebrow>The specialist</Eyebrow>
           <h2 className="mt-5 font-serif text-4xl leading-[1.02] sm:text-6xl">
-            Ella, your lash
+            Your lash, brow, skin specialist
             <br />
-            <span className="gold-text italic">&amp;</span> brow specialist.
+            <span className="gold-text italic">&amp;</span> make-up artist.
           </h2>
           <p className="mt-8 border-l-2 border-gold pl-6 font-serif text-2xl leading-relaxed text-ink-soft">
-            “Enhancing natural beauty should feel empowering — you should
-            still look like you, only more awake.”
+            “{SITE.founder.promise}”
           </p>
           <div className="mt-8 space-y-5 text-[0.95rem] leading-8 text-muted">
+            <p>{SITE.founder.intro}</p>
             <p>
-              Clients come back because Ella is honest about what will suit
-              their eye shape and natural lash strength. Sets are mapped,
-              isolated and kept light. Glue is chosen with sensitive eyes in
-              mind. The room is calm; the finish is considered.
-            </p>
-            <p>
-              Prefer to stay home? Mobile appointments travel across London,
-              including Beckton, so the same standard of work meets you there.
+              {SITE.founder.training} Prefer to stay home? Mobile appointments
+              bring the same standard of work to your own address.
             </p>
           </div>
+          <ul className="mt-8 flex flex-wrap gap-2.5">
+            {SITE.awards.map((award) => (
+              <li
+                key={`${award.year}-${award.title}`}
+                className="gold-panel inline-flex items-center gap-2 rounded-full px-4 py-2 text-[0.6rem] tracking-[0.22em] text-gold-deep uppercase"
+              >
+                <span className="font-script text-base normal-case tracking-normal">
+                  {award.year}
+                </span>
+                {award.title}
+              </li>
+            ))}
+          </ul>
           <div className="mt-10 flex flex-wrap items-center gap-6">
             <BookButton />
             <Link

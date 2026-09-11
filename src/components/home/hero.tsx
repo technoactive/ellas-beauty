@@ -52,9 +52,9 @@ export function Hero() {
 
             <div className="mt-10 grid gap-8 sm:grid-cols-[1fr_auto] sm:items-end lg:max-w-2xl">
               <p className="max-w-md text-base leading-8 text-ink-soft">
-                {SITE.tagline} Bespoke extensions, brow architecture, makeup
-                and facial sculpting by Ella — in salon, in Beckton, or at
-                your home.
+                {SITE.strapline} Over 8 years of award-winning artistry with
+                organic Russian-made products — at Rush Salon, West Hampstead,
+                or mobile at your own address.
               </p>
               <div className="flex flex-col items-start gap-3">
                 <BookButton />
@@ -88,7 +88,7 @@ export function Hero() {
             <figcaption className="mt-8 flex items-start justify-between gap-6 border-t border-gold/60 pt-4 text-[0.66rem] tracking-[0.24em] text-gold-deep uppercase">
               <span>No. 01 — The studio edit</span>
               <span className="text-right">
-                Rush Hair, 186-188
+                Rush Salon, 186-188
                 <br />
                 West End Lane
               </span>

@@ -2,7 +2,27 @@ export const faqs = [
   {
     question: "Where is Ella’s Beauty in London?",
     answer:
-      "The studio is inside Rush Hair West Hampstead at 186-188 West End Lane, London NW6 1SG — a two-minute walk from West Hampstead Thameslink. Ella also sees clients in Beckton and offers a mobile service across London.",
+      "Ella works from Rush Salon at 186-188 West End Lane, West Hampstead, London NW6 1SG — a two-minute walk from West Hampstead Thameslink. Mobile appointments at your own address are also available; please contact us first to arrange one.",
+  },
+  {
+    question: "What are the opening hours?",
+    answer:
+      "Monday to Friday 10am – 10pm, Saturday 10am – 8pm and Sunday 12pm – 6pm. Evening and weekend slots book quickly, so reserve on Fresha as early as you can.",
+  },
+  {
+    question: "Is Ella qualified and experienced?",
+    answer:
+      "Yes. Ella has specialised in luxury lash, brow, skin and makeup services for over 8 years using organic Russian-made products. She trained at the Beauty Academy, completed 4 further courses and 6 masterclasses, and has won the Health & Beauty Awards (2019 and 2021), Innovative Lash Creator of the Year (2022) and the BABTAC & CIBTAC Awards (2023).",
+  },
+  {
+    question: "Can you infill lashes done by another technician?",
+    answer:
+      "No. Infills are only carried out on Ella’s own work, so the health of your natural lashes and the quality of the set can be guaranteed. For lashes from elsewhere, a removal and a fresh full set are required.",
+  },
+  {
+    question: "When should I book my lash infill?",
+    answer:
+      "Within 1–3 weeks of your last appointment, with at least 50% of the extensions still in place. Beyond that, or with fewer lashes remaining, a full set is needed.",
   },
   {
     question: "Do I need a patch test?",
@@ -22,7 +42,7 @@ export const faqs = [
   {
     question: "How should I prepare for lashes or a lash lift?",
     answer:
-      "Arrive with clean, makeup-free lashes. Avoid caffeine if you find it hard to keep still, and wear a top you do not need to pull over your head afterwards. For lifts and tints, skip oil-based eye products for 24 hours before.",
+      "Arrive with clean lashes and no makeup or mascara on, and please do not wear contact lenses during the appointment. Avoid caffeine if you find it hard to keep still, and wear a top you do not need to pull over your head afterwards. For lifts and tints, skip oil-based eye products for 24 hours before.",
   },
   {
     question: "Can I book makeup for a wedding or event?",
@@ -32,12 +52,12 @@ export const faqs = [
   {
     question: "Do you offer mobile appointments?",
     answer:
-      "Yes. A mobile add-on of £30 covers travel so Ella can bring lash, brow, makeup or skin treatments to you. Availability depends on the diary — book via Fresha or send a note through the contact form.",
+      "Yes. Ella can bring lash, brow, makeup or skin treatments to your own address; a £30 mobile add-on covers travel. For mobile appointments please contact us first — WhatsApp is quickest — so timing and location can be confirmed.",
   },
   {
     question: "What is your cancellation policy?",
     answer:
-      "Please give as much notice as possible if you need to move an appointment. Late cancellations and no-shows may be subject to the policy shown at checkout on Fresha, as diary time has been reserved for you.",
+      "Please give at least 48 hours’ notice to cancel or reschedule. Arriving more than 15 minutes late will result in the appointment being cancelled, as the diary time has been reserved for you. Late cancellations and no-shows may also be subject to the policy shown at checkout on Fresha.",
   },
   {
     question: "Are treatments suitable during pregnancy?",
@@ -47,6 +67,6 @@ export const faqs = [
   {
     question: "How do I book?",
     answer:
-      "All appointments are confirmed instantly through Fresha. Choose your treatment, date and time, and you will receive a confirmation by email or text. You can also write to hello@ellas-beauty.co.uk with questions before you book.",
+      "All appointments are confirmed instantly through Fresha. Choose your treatment, date and time, and you will receive a confirmation by email or text. Questions first? Message Ella on WhatsApp, on Instagram @iamellasbeauty, or email hello@ellas-beauty.co.uk.",
   },
 ] as const;

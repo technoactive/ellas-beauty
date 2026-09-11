@@ -7,16 +7,16 @@ const pillars = [
     body: "Every set is designed for your eye shape, lifestyle and natural lash strength — never a one-length tray.",
   },
   {
-    title: "Lash health first",
-    body: "Fine diameters, full isolation, and honest advice if a look would overload your lashes.",
+    title: "Organic Russian-made products",
+    body: "Only the highest-quality organic Russian-made lashes, adhesives and brow products — full isolation, fine diameters, honest advice.",
   },
   {
     title: "Hospitality, not hurry",
-    body: "A calm chair, evening hours until 11pm, and the kind of care reviewers call patient.",
+    body: "A calm chair, evening hours until 10pm, and the kind of care reviewers call patient.",
   },
   {
     title: "Beauty that travels",
-    body: "West Hampstead studio, Beckton, or your home. The standard does not change with the postcode.",
+    body: "Rush Salon in West Hampstead, or mobile at your own address. The standard does not change with the postcode.",
   },
 ];
 

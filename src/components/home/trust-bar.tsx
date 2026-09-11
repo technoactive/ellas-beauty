@@ -5,8 +5,8 @@ import { SITE } from "@/lib/site";
 const stats = [
   { label: "Fresha rating", value: SITE.rating, suffix: " / 5", decimals: 1 },
   { label: "Verified reviews", value: SITE.reviewCount, suffix: "+" },
-  { label: "Open late, weekdays", value: 11, suffix: " pm" },
-  { label: "Minutes to Thameslink", value: 2 },
+  { label: "Years of artistry", value: SITE.founder.yearsExperience, suffix: "+" },
+  { label: "Industry awards", value: SITE.awards.length },
 ];
 
 export function TrustBar() {

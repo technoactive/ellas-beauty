@@ -308,14 +308,14 @@ export const serviceCategories: ServiceCategory[] = [
   {
     slug: "mobile",
     title: "Mobile & studio",
-    eyebrow: "West Hampstead · Beckton · your home",
+    eyebrow: "West Hampstead · or your own address",
     summary:
-      "See Ella in salon at Rush Hair West Hampstead, in Beckton, or book a mobile visit. Patch tests and consultations are complimentary.",
+      "See Ella at Rush Salon in West Hampstead, or book a mobile appointment at your own address. Patch tests and consultations are complimentary.",
     seoTitle: "Mobile Lash & Beauty Appointments London | Ella’s Beauty",
     seoDescription:
-      "Salon appointments in West Hampstead plus mobile lash, brow, makeup and skin treatments across London, including Beckton. Complimentary consultation and patch test.",
+      "Salon appointments in West Hampstead plus mobile lash, brow, makeup and skin treatments at your own address across London. Complimentary consultation and patch test.",
     intro:
-      "Luxury should travel. Ella offers a complimentary consultation and patch test, then meets you in salon or at home. Mobile visits carry a travel fee so the treatment itself stays unhurried and precise.",
+      "Luxury should travel. Ella offers a complimentary consultation and patch test, then meets you in salon or at your own address. Mobile visits carry a travel fee so the treatment itself stays unhurried and precise — please contact us first to arrange one.",
     image:
       "https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=1600&q=80",
     imageAlt: "Calm, refined beauty salon interior",
@@ -343,7 +343,7 @@ export const serviceCategories: ServiceCategory[] = [
         duration: "1 hour 30 mins",
         price: 30,
         description:
-          "Travel add-on for home appointments. Treatment prices are in addition. Coverage includes West Hampstead, Beckton and nearby London areas.",
+          "Travel add-on for appointments at your own address. Treatment prices are in addition. Please contact Ella first to confirm your area and timing.",
         popular: true,
       },
     ],

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { PageHero } from "@/components/ui/page-hero";
 import { Container, Section } from "@/components/ui/section";
 import { BookButton } from "@/components/ui/book-button";
@@ -35,22 +36,52 @@ export default function BookPage() {
       />
       <Section className="pt-4">
         <Container className="grid gap-8 lg:grid-cols-[0.9fr_1.1fr]">
-          <div className="rounded-[1.4rem] bg-ink p-8 text-[#fffaf0] sm:p-10">
-            <h2 className="font-serif text-4xl">Before you tap book</h2>
-            <ol className="mt-6 list-decimal space-y-4 pl-5 text-sm leading-7 text-[#f3eadc]/85">
-              <li>New to tint, lift, lamination or extensions? Add the free patch test 24–48 hours ahead.</li>
-              <li>Arrive with clean lashes and no oil-based eye products.</li>
-              <li>Mobile visits: add the £30 travel service and mention your area in the notes.</li>
-              <li>Bridal makeup: request a trial first so the look is locked before the day.</li>
+          <div className="relative overflow-hidden rounded-[2rem] border border-gold/60 bg-ink p-8 text-[#fffaf0] sm:p-10">
+            <div
+              aria-hidden
+              className="pointer-events-none absolute -top-24 -right-24 size-72 rounded-full bg-[radial-gradient(circle,rgba(212,175,103,0.35),transparent_65%)]"
+            />
+            <h2 className="relative font-serif text-4xl">Before you tap book</h2>
+            <ol className="relative mt-6 space-y-4 text-sm leading-7 text-[#f3eadc]/85">
+              {SITE.policies.map((policy, index) => (
+                <li key={policy} className="flex gap-4">
+                  <span className="gold-text shrink-0 font-script text-2xl leading-none">
+                    {String(index + 1).padStart(2, "0")}
+                  </span>
+                  <span>{policy}</span>
+                </li>
+              ))}
+              <li className="flex gap-4">
+                <span className="gold-text shrink-0 font-script text-2xl leading-none">
+                  {String(SITE.policies.length + 1).padStart(2, "0")}
+                </span>
+                <span>
+                  New to tint, lift, lamination or extensions? Add the
+                  complimentary patch test 24–48 hours ahead.
+                </span>
+              </li>
             </ol>
-            <div className="mt-8">
+            <div className="relative mt-8 flex flex-wrap items-center gap-4">
               <BookButton>Open Fresha diary</BookButton>
+              <a
+                href={SITE.social.whatsapp.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center rounded-full border border-gold/60 px-5 py-3 text-[0.66rem] tracking-[0.3em] text-gold-light uppercase transition-colors hover:bg-gold/15"
+              >
+                WhatsApp for mobile
+              </a>
             </div>
-            <p className="mt-6 text-xs tracking-wide text-[#f3eadc]/60">
-              You will leave this site for Fresha, where payments and reminders are handled securely.
+            <p className="relative mt-6 text-xs tracking-wide text-[#f3eadc]/60">
+              You will leave this site for Fresha, where payments and reminders
+              are handled securely. Full{" "}
+              <Link href="/terms" className="underline decoration-gold/50 underline-offset-4">
+                terms &amp; conditions
+              </Link>
+              .
             </p>
           </div>
-          <div className="rounded-[1.4rem] gold-border bg-[#fffdf8] p-8">
+          <div className="gold-panel rounded-[2rem] p-8">
             <h2 className="font-serif text-3xl">Popular starting points</h2>
             <ul className="mt-6 space-y-4">
               {serviceCategories
@@ -62,7 +93,7 @@ export default function BookPage() {
                 .map((service) => (
                   <li
                     key={service.id}
-                    className="flex items-center justify-between gap-4 border-b border-gold/10 pb-4"
+                    className="flex items-center justify-between gap-4 border-b border-gold/30 pb-4"
                   >
                     <div>
                       <p className="font-serif text-xl">{service.name}</p>

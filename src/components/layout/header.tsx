@@ -5,6 +5,7 @@ import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "motion/react";
 import { Logo } from "@/components/brand/logo";
+import { SocialLinks } from "@/components/brand/social-links";
 import { NAV, SITE } from "@/lib/site";
 import { cn } from "@/lib/utils";
 
@@ -207,9 +208,14 @@ export function Header() {
               >
                 Book on Fresha
               </a>
-              <p className="text-[0.66rem] leading-6 tracking-[0.16em] text-muted uppercase">
-                Rush Hair West Hampstead · 186-188 West End Lane · NW6 1SG
-              </p>
+              <div className="flex flex-wrap items-center justify-between gap-4">
+                <p className="text-[0.66rem] leading-6 tracking-[0.16em] text-muted uppercase">
+                  Rush Salon · 186-188 West End Lane · NW6 1SG
+                  <br />
+                  or mobile, at your own address
+                </p>
+                <SocialLinks />
+              </div>
             </motion.div>
           </motion.div>
         ) : null}

@@ -4,7 +4,7 @@ import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import { CookieBanner } from "@/components/layout/cookie-banner";
 import { JsonLd } from "@/components/seo/json-ld";
-import { beautySalonJsonLd, websiteJsonLd } from "@/lib/schema";
+import { beautySalonJsonLd, personJsonLd, websiteJsonLd } from "@/lib/schema";
 import { SITE } from "@/lib/site";
 import "./globals.css";
 
@@ -108,6 +108,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       <body className="flex min-h-full flex-col bg-ivory text-ink">
         <JsonLd data={websiteJsonLd()} />
         <JsonLd data={beautySalonJsonLd()} />
+        <JsonLd data={personJsonLd()} />
         <a
           href="#main"
           className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-[80] focus:rounded-full focus:bg-white focus:px-4 focus:py-2"

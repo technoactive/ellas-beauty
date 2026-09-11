@@ -37,7 +37,6 @@ export function beautySalonJsonLd() {
     areaServed: [
       { "@type": "City", name: "London" },
       { "@type": "Place", name: "West Hampstead" },
-      { "@type": "Place", name: "Beckton" },
       { "@type": "Place", name: "Kilburn" },
     ],
     openingHoursSpecification: SITE.openingHours.map((item) => ({
@@ -53,11 +52,19 @@ export function beautySalonJsonLd() {
       bestRating: 5,
       worstRating: 1,
     },
-    founder: {
-      "@type": "Person",
-      name: "Ella",
-      jobTitle: "Lash and brow specialist",
-    },
+    sameAs: SITE.sameAs,
+    slogan: SITE.strapline,
+    award: SITE.awards.map((award) => `${award.title} ${award.year}`),
+    knowsAbout: [
+      "Eyelash extensions",
+      "Lash lift",
+      "Brow lamination",
+      "Henna brows",
+      "Bridal makeup",
+      "Facial sculpting",
+      "Dermaplaning",
+    ],
+    founder: { "@id": `${SITE.url}/#ella` },
     amenityFeature: SITE.amenities.map((name) => ({
       "@type": "LocationFeatureSpecification",
       name,
@@ -78,6 +85,30 @@ export function beautySalonJsonLd() {
         },
       })),
     ),
+  };
+}
+
+export function personJsonLd() {
+  return {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "@id": `${SITE.url}/#ella`,
+    name: SITE.founder.name,
+    jobTitle: SITE.founder.role,
+    description: `${SITE.founder.intro} ${SITE.founder.training}`,
+    url: `${SITE.url}/about`,
+    worksFor: { "@id": `${SITE.url}/#salon` },
+    sameAs: [SITE.social.instagram.url],
+    award: SITE.awards.map((award) => `${award.title} ${award.year}`),
+    alumniOf: { "@type": "EducationalOrganization", name: "Beauty Academy" },
+    knowsAbout: [
+      "Eyelash extensions",
+      "Russian volume lashes",
+      "Brow lamination",
+      "Henna brows",
+      "Makeup artistry",
+      "Facial sculpting",
+    ],
   };
 }
 
