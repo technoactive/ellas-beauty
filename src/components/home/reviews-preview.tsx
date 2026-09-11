@@ -1,3 +1,4 @@
+import { Star } from "lucide-react";
 import { Marquee } from "@/components/magicui/marquee";
 import { Container, Eyebrow, Section } from "@/components/ui/section";
 import { reviews } from "@/lib/reviews";
@@ -15,18 +16,23 @@ function ReviewCard({
   index: number;
 }) {
   return (
-    <figure className="flex w-[22rem] shrink-0 flex-col justify-between border border-gold/30 bg-ivory p-7">
+    <figure className="gold-panel flex w-[22rem] shrink-0 flex-col justify-between rounded-3xl p-7 shadow-[0_20px_50px_-30px_rgba(140,106,36,0.5)]">
       <div>
-        <span className="font-script text-3xl text-gold-deep">
-          0{index + 1}
-        </span>
+        <div className="flex items-center justify-between">
+          <span className="font-script text-3xl text-gold">0{index + 1}</span>
+          <span className="flex gap-0.5" aria-label="5 star rating">
+            {Array.from({ length: 5 }).map((_, i) => (
+              <Star key={i} className="size-3 fill-gold text-gold" aria-hidden />
+            ))}
+          </span>
+        </div>
         <blockquote className="mt-4 font-serif text-[1.35rem] leading-[1.5] text-ink">
           “{quote}”
         </blockquote>
       </div>
-      <figcaption className="mt-8 flex items-center justify-between border-t border-gold/25 pt-4 text-[0.62rem] tracking-[0.26em] text-muted uppercase">
+      <figcaption className="mt-8 flex items-center justify-between border-t border-gold/50 pt-4 text-[0.62rem] tracking-[0.26em] text-gold-deep uppercase">
         <span>{name}</span>
-        <span>{treatment}</span>
+        <span className="text-muted">{treatment}</span>
       </figcaption>
     </figure>
   );
@@ -39,12 +45,13 @@ export function ReviewsPreview() {
         <div className="lg:col-span-8">
           <Eyebrow>Client love</Eyebrow>
           <h2 className="mt-5 font-serif text-4xl leading-[1.02] sm:text-6xl">
-            {SITE.rating} from {SITE.reviewCount} reviews —
+            <span className="gold-text">{SITE.rating}</span> from {SITE.reviewCount}{" "}
+            reviews —
             <br />
             <span className="italic">and a reputation for patience.</span>
           </h2>
         </div>
-        <p className="text-[0.62rem] tracking-[0.3em] text-muted uppercase lg:col-span-4 lg:text-right">
+        <p className="text-[0.62rem] tracking-[0.3em] text-gold-deep uppercase lg:col-span-4 lg:text-right">
           Verified on Fresha &amp; Treatwell
         </p>
       </Container>

@@ -12,14 +12,14 @@ const stats = [
 export function TrustBar() {
   return (
     <Container className="py-14 sm:py-18">
-      <dl className="grid grid-cols-2 gap-y-10 lg:grid-cols-4 lg:divide-x lg:divide-gold/25">
+      <dl className="gold-panel grid grid-cols-2 gap-y-10 rounded-[2rem] px-6 py-10 lg:grid-cols-4 lg:divide-x lg:divide-gold/40 lg:px-4">
         {stats.map((stat, index) => (
           <div
             key={stat.label}
             className="flex flex-col items-start gap-3 lg:items-center lg:text-center"
           >
             <dt className="order-2 flex items-center gap-3 text-[0.62rem] tracking-[0.3em] text-muted uppercase">
-              <span className="font-script text-base text-gold-deep normal-case tracking-normal">
+              <span className="font-script text-base text-gold normal-case tracking-normal">
                 0{index + 1}
               </span>
               {stat.label}
@@ -29,7 +29,7 @@ export function TrustBar() {
                 value={stat.value}
                 decimalPlaces={"decimals" in stat ? stat.decimals : 0}
               />
-              <span className="text-2xl text-gold-deep">{stat.suffix}</span>
+              <span className="gold-text text-2xl">{stat.suffix}</span>
             </dd>
           </div>
         ))}

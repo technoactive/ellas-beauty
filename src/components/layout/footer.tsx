@@ -14,7 +14,8 @@ const secondary = [
 
 export function Footer() {
   return (
-    <footer className="relative mt-auto overflow-hidden border-t border-gold/25 bg-ivory">
+    <footer className="relative mt-auto overflow-hidden bg-ivory pt-6">
+      <div className="mx-auto h-[3px] max-w-7xl rounded-full bg-[linear-gradient(90deg,transparent,#c4a056,#f3e2b8,#8c6a24,transparent)]" aria-hidden />
       <Container className="grid gap-14 py-20 lg:grid-cols-12">
         <div className="lg:col-span-5">
           <Logo size="lg" className="items-start" />
@@ -81,7 +82,7 @@ export function Footer() {
         </div>
       </Container>
 
-      <div className="border-t border-gold/20">
+      <div className="border-t border-gold/40 bg-linear-to-b from-transparent to-gold-light/30">
         <Container className="flex flex-col gap-2 py-6 text-[0.62rem] tracking-[0.24em] text-muted uppercase sm:flex-row sm:items-center sm:justify-between">
           <p>
             © {new Date().getFullYear()} {SITE.name}

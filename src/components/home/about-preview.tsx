@@ -14,19 +14,21 @@ export function AboutPreview() {
             <div className="relative">
               <span
                 aria-hidden
-                className="absolute -inset-3 -translate-x-4 translate-y-4 border border-gold/50"
+                className="absolute -inset-3 -translate-x-3 translate-y-4 rounded-[2.4rem] border border-gold/70 sm:-translate-x-4"
               />
-              <div className="relative aspect-[4/5] overflow-hidden bg-ivory-deep">
-                <Image
-                  src={IMAGES.portrait.src}
-                  alt={IMAGES.portrait.alt}
-                  fill
-                  sizes="(max-width: 1024px) 90vw, 40vw"
-                  className="object-cover"
-                />
+              <div className="gold-frame">
+                <div className="relative aspect-[4/5] overflow-hidden bg-ivory-deep">
+                  <Image
+                    src={IMAGES.portrait.src}
+                    alt={IMAGES.portrait.alt}
+                    fill
+                    sizes="(max-width: 1024px) 90vw, 40vw"
+                    className="object-cover"
+                  />
+                </div>
               </div>
             </div>
-            <figcaption className="mt-8 flex justify-between border-t border-gold/30 pt-4 text-[0.62rem] tracking-[0.26em] text-muted uppercase">
+            <figcaption className="mt-8 flex justify-between border-t border-gold/60 pt-4 text-[0.62rem] tracking-[0.26em] text-gold-deep uppercase">
               <span>No. 02 — The specialist</span>
               <span>Est. West Hampstead</span>
             </figcaption>
@@ -38,9 +40,9 @@ export function AboutPreview() {
           <h2 className="mt-5 font-serif text-4xl leading-[1.02] sm:text-6xl">
             Ella, your lash
             <br />
-            <span className="italic">&amp;</span> brow specialist.
+            <span className="gold-text italic">&amp;</span> brow specialist.
           </h2>
-          <p className="mt-8 font-serif text-2xl leading-relaxed text-ink-soft">
+          <p className="mt-8 border-l-2 border-gold pl-6 font-serif text-2xl leading-relaxed text-ink-soft">
             “Enhancing natural beauty should feel empowering — you should
             still look like you, only more awake.”
           </p>
@@ -60,7 +62,7 @@ export function AboutPreview() {
             <BookButton />
             <Link
               href="/about"
-              className="group inline-flex items-center gap-3 text-[0.68rem] tracking-[0.3em] text-ink uppercase"
+              className="group inline-flex items-center gap-3 text-[0.68rem] tracking-[0.3em] text-gold-deep uppercase"
             >
               Meet Ella
               <span className="h-px w-10 bg-gold transition-all duration-300 group-hover:w-16" />

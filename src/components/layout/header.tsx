@@ -29,7 +29,7 @@ function NavLink({
       href={href}
       className={cn(
         "group relative py-2 text-[0.68rem] tracking-[0.3em] uppercase transition-colors",
-        active ? "text-ink" : "text-ink-soft/80 hover:text-ink",
+        active ? "text-gold-deep" : "text-ink-soft/80 hover:text-gold-deep",
       )}
     >
       {label}
@@ -68,8 +68,9 @@ export function Header() {
   return (
     <>
       <header className="fixed inset-x-0 top-0 z-50">
-        <div className="bg-ivory/90 backdrop-blur-md">
-          <div className="mx-auto grid h-[76px] max-w-7xl grid-cols-[1fr_auto_1fr] items-center px-5 sm:px-8">
+        <div className="bg-ivory/92 backdrop-blur-md">
+          <div className="h-[3px] bg-[linear-gradient(90deg,#8c6a24,#e8d5a3,#c4a056,#f3e2b8,#8c6a24)]" aria-hidden />
+          <div className="mx-auto grid h-[72px] max-w-7xl grid-cols-[1fr_auto_1fr] items-center px-5 sm:px-8">
             <nav className="hidden items-center gap-9 lg:flex" aria-label="Primary left">
               {LEFT.map((item) => (
                 <NavLink
@@ -104,7 +105,7 @@ export function Header() {
                 href={SITE.bookingUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="rounded-full border border-ink px-5 py-2 text-[0.66rem] tracking-[0.3em] text-ink uppercase transition-colors hover:border-gold hover:bg-gold hover:text-ink"
+                className="rounded-full bg-[linear-gradient(135deg,#8c6a24,#c4a056_45%,#d4af67_65%,#8c6a24)] px-5 py-2 text-[0.66rem] font-semibold tracking-[0.3em] text-[#fffaf0] uppercase shadow-[0_10px_24px_-12px_rgba(140,106,36,0.8)] transition-transform hover:scale-[1.03]"
               >
                 Book
               </a>
@@ -134,7 +135,7 @@ export function Header() {
               </span>
             </button>
           </div>
-          <div className="gold-rule opacity-70" aria-hidden />
+          <div className="h-px bg-gold/50" aria-hidden />
         </div>
       </header>
 
@@ -153,7 +154,7 @@ export function Header() {
           >
             <span
               aria-hidden
-              className="pointer-events-none absolute -right-6 top-24 select-none font-script text-[9rem] leading-none text-gold/15 sm:text-[14rem]"
+              className="pointer-events-none absolute -right-6 top-24 select-none font-script text-[9rem] leading-none text-gold/25 sm:text-[14rem]"
             >
               Ella’s
             </span>
@@ -168,9 +169,9 @@ export function Header() {
                     initial={{ opacity: 0, y: 18 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.08 + index * 0.05, duration: 0.5 }}
-                    className="flex items-baseline gap-5 border-b border-gold/15 py-3"
+                    className="flex items-baseline gap-5 border-b border-gold/40 py-3"
                   >
-                    <span className="w-8 font-script text-xl text-gold-deep">
+                    <span className="w-8 font-script text-xl text-gold">
                       0{index + 1}
                     </span>
                     <Link
@@ -197,7 +198,7 @@ export function Header() {
                 href={SITE.bookingUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex h-14 items-center justify-center rounded-full bg-ink text-[0.7rem] tracking-[0.32em] text-ivory uppercase"
+                className="inline-flex h-14 items-center justify-center rounded-full bg-[linear-gradient(135deg,#8c6a24,#c4a056_45%,#d4af67_65%,#8c6a24)] text-[0.7rem] font-semibold tracking-[0.32em] text-[#fffaf0] uppercase shadow-[0_18px_40px_-18px_rgba(140,106,36,0.8)]"
               >
                 Book on Fresha
               </a>

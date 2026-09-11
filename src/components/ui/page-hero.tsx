@@ -20,7 +20,7 @@ export function PageHero({
     <div className={cn("relative overflow-hidden pt-[76px]", className)}>
       <span
         aria-hidden
-        className="pointer-events-none absolute -right-6 top-20 select-none font-script text-[10rem] leading-none text-gold/10 sm:text-[16rem]"
+        className="pointer-events-none absolute -right-6 top-20 select-none font-script text-[10rem] leading-none text-gold/20 sm:text-[16rem]"
       >
         {eyebrow}
       </span>

@@ -7,7 +7,7 @@
   --ink: #1a1610;
   --ink-soft: #3d3428;
   --muted: #6d6254;
-  --line: rgba(166, 129, 58, 0.22);
+  --line: rgba(166, 129, 58, 0.45);
   --gold: #c4a056;
   --gold-deep: #8c6a24;
   --gold-light: #e8d5a3;
@@ -81,6 +81,34 @@ body {
   border: 1px solid transparent;
   background:
     linear-gradient(var(--white), var(--white)) padding-box,
+    linear-gradient(135deg, #f3e2b8, #c4a056, #8c6a24, #e8d5a3) border-box;
+}
+
+/* Metallic gold picture frame for imagery: gradient border + soft inner bevel */
+.gold-frame {
+  position: relative;
+  padding: 6px;
+  border-radius: 2rem;
+  background: linear-gradient(
+    135deg,
+    #f3e2b8 0%,
+    #c4a056 30%,
+    #8c6a24 55%,
+    #d4af67 78%,
+    #f3e2b8 100%
+  );
+  box-shadow:
+    0 24px 60px -24px rgba(140, 106, 36, 0.45),
+    inset 0 1px 0 rgba(255, 255, 255, 0.5);
+}
+.gold-frame > * {
+  border-radius: calc(2rem - 6px);
+}
+
+.gold-panel {
+  border: 1px solid transparent;
+  background:
+    linear-gradient(180deg, #fffdf8, #f7efe0) padding-box,
     linear-gradient(135deg, #f3e2b8, #c4a056, #8c6a24, #e8d5a3) border-box;
 }
 
