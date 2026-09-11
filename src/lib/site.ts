@@ -9,7 +9,7 @@ export const SITE = {
   strapline: "Your lash, brow, skin specialist & make-up artist.",
   description:
     "Award-winning luxury lashes, brows, skin and makeup in West Hampstead. Over 8 years of bespoke artistry by Ella using organic Russian-made products, in salon or mobile at your address.",
-  email: "hello@ellas-beauty.co.uk",
+  email: "contact@ellas-beauty.co.uk",
   bookingUrl:
     "https://www.fresha.com/en-GB/a/ellas-beauty-london-rush-hair-west-hampstead-186-188-west-end-lane-qq4f1g83?pId=1332797",
   rating: 4.9,

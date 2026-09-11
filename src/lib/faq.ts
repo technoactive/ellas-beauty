@@ -67,6 +67,6 @@ export const faqs = [
   {
     question: "How do I book?",
     answer:
-      "All appointments are confirmed instantly through Fresha. Choose your treatment, date and time, and you will receive a confirmation by email or text. Questions first? Message Ella on WhatsApp, on Instagram @iamellasbeauty, or email hello@ellas-beauty.co.uk.",
+      "All appointments are confirmed instantly through Fresha. Choose your treatment, date and time, and you will receive a confirmation by email or text. Questions first? Message Ella on WhatsApp, on Instagram @iamellasbeauty, or email contact@ellas-beauty.co.uk.",
   },
 ] as const;
