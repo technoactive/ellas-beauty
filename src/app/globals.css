@@ -75,6 +75,12 @@ body {
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
+  /* Italic/script glyphs overhang their box; pad the paint area so they are not clipped */
+  padding-inline: 0.14em;
+  margin-inline: -0.14em;
+  padding-block: 0.12em;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
 }
 
 .gold-border {
