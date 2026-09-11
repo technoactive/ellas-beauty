@@ -43,10 +43,14 @@ export default function ContactPage() {
               <br />
               {SITE.address.locality} {SITE.address.postalCode}
               <br />
-              <span className="text-muted">or mobile, at your own address — contact us first</span>
+              <span className="text-muted">or mobile, all across London — contact us first</span>
               <br />
               <a className="text-gold-deep" href={`mailto:${SITE.email}`}>
                 {SITE.email}
+              </a>
+              <br />
+              <a className="text-gold-deep" href={SITE.phone.href}>
+                {SITE.phone.display}
               </a>
             </address>
             <div className="mt-6">

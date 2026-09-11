@@ -29,27 +29,27 @@ export function AboutPreview() {
               </div>
             </div>
             <figcaption className="mt-8 flex justify-between border-t border-gold/60 pt-4 text-[0.62rem] tracking-[0.26em] text-gold-deep uppercase">
-              <span>No. 02 — The specialist</span>
-              <span>Est. West Hampstead</span>
+              <span>No. 02 — {IMAGES.portrait.name}</span>
+              <span>Rush Salon, NW6</span>
             </figcaption>
           </figure>
         </BlurFade>
 
         <BlurFade delay={0.15} className="lg:col-span-6 lg:col-start-7">
-          <Eyebrow>The specialist</Eyebrow>
+          <Eyebrow>{SITE.founder.headline}</Eyebrow>
           <h2 className="mt-5 font-serif text-4xl leading-[1.02] sm:text-6xl">
             Your lash, brow, skin specialist
             <br />
             <span className="gold-text italic">&amp;</span> make-up artist.
           </h2>
           <p className="mt-8 border-l-2 border-gold pl-6 font-serif text-2xl leading-relaxed text-ink-soft">
-            “{SITE.founder.promise}”
+            “{SITE.founder.intro}”
           </p>
           <div className="mt-8 space-y-5 text-[0.95rem] leading-8 text-muted">
-            <p>{SITE.founder.intro}</p>
+            <p>{SITE.founder.promise}</p>
             <p>
               {SITE.founder.training} Prefer to stay home? Mobile appointments
-              bring the same standard of work to your own address.
+              bring the same standard of work anywhere in London.
             </p>
           </div>
           <ul className="mt-8 flex flex-wrap gap-2.5">

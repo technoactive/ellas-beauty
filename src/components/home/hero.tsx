@@ -5,19 +5,20 @@ import { Container } from "@/components/ui/section";
 import { IMAGES, SITE } from "@/lib/site";
 
 const strip = [
-  "Classic & hybrid lashes",
-  "Russian volume",
+  "Hybrid & Russian volume lashes",
+  "Kim K · Kendall · Wispy",
   "Brow lamination",
-  "Henna HD brows",
-  "Bridal makeup",
-  "Face sculpt",
+  "Brow henna",
+  "Bridal & Arabic make-up",
+  "Non-surgical face sculpt",
   "Lash lift",
   "Dermaplaning",
+  "Swarovski details",
 ];
 
 export function Hero() {
   return (
-    <section className="relative overflow-hidden pt-[76px]">
+    <section className="relative overflow-hidden pt-(--header-h)">
       <div
         aria-hidden
         className="pointer-events-none absolute -top-40 right-[-20%] size-[42rem] rounded-full bg-[radial-gradient(circle,rgba(212,175,103,0.28),transparent_65%)] blur-2xl"
@@ -35,26 +36,25 @@ export function Hero() {
             <div className="flex items-center gap-4">
               <span className="h-px w-12 bg-gold" aria-hidden />
               <p className="text-[0.66rem] tracking-[0.42em] text-gold-deep uppercase">
-                West Hampstead · London
+                West Hampstead · London<span className="hidden sm:inline"> · Mobile</span>
               </p>
             </div>
 
             <h1 className="mt-8 font-serif text-[clamp(2.75rem,6.2vw,5.75rem)] leading-[0.92] tracking-[-0.02em] text-ink">
-              Lashes, brows
+              Embrace
               <br />
+              your <span className="gold-text italic font-normal">beauty</span>
               <span className="font-script text-[0.7em] leading-none text-gold">
-                &amp;
-              </span>{" "}
-              skin, <span className="gold-text italic font-normal">composed</span>
-              <br />
-              for you.
+                .
+              </span>
             </h1>
 
             <div className="mt-10 grid gap-8 sm:grid-cols-[1fr_auto] sm:items-end lg:max-w-2xl">
               <p className="max-w-md text-base leading-8 text-ink-soft">
-                {SITE.strapline} Over 8 years of award-winning artistry with
-                organic Russian-made products — at Rush Salon, West Hampstead,
-                or mobile at your own address.
+                {SITE.strapline} Over {SITE.founder.yearsHandsOn} years of
+                hands-on experience, {SITE.founder.yearsExperience}+ fully
+                qualified — at Rush Salon, West Hampstead, or mobile all across
+                London.
               </p>
               <div className="flex flex-col items-start gap-3">
                 <BookButton />
@@ -86,7 +86,7 @@ export function Hero() {
               </div>
             </div>
             <figcaption className="mt-8 flex items-start justify-between gap-6 border-t border-gold/60 pt-4 text-[0.66rem] tracking-[0.24em] text-gold-deep uppercase">
-              <span>No. 01 — The studio edit</span>
+              <span>No. 01 — {IMAGES.hero.name}</span>
               <span className="text-right">
                 Rush Salon, 186-188
                 <br />

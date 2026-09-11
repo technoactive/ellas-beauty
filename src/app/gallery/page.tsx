@@ -6,26 +6,16 @@ import { FinalCta } from "@/components/home/final-cta";
 import { JsonLd } from "@/components/seo/json-ld";
 import { breadcrumbJsonLd } from "@/lib/schema";
 import { pageMetadata } from "@/lib/metadata";
-import { IMAGES } from "@/lib/site";
+import { SERVICE_WHEEL } from "@/lib/site";
 
 export const metadata: Metadata = pageMetadata({
-  title: "Gallery",
+  title: "Gallery — real lash, brow, makeup & skin results",
   description:
-    "Browse the Ella’s Beauty look book: lashes, brows, makeup and skin in West Hampstead. Book the finish you want on Fresha.",
+    "Browse Ella’s own work: Russian and mega volume, Kim K, Kendall and wispy lashes, brow lamination and henna, bridal and Arabic makeup, dermaplaning and face sculpt. Book the finish you want on Fresha.",
   path: "/gallery",
 });
 
-const gallery = [
-  { ...IMAGES.lashes, caption: "Lash application" },
-  { ...IMAGES.brows, caption: "Brow definition" },
-  { ...IMAGES.glam, caption: "Editorial skin" },
-  { ...IMAGES.skin, caption: "Face sculpt ritual" },
-  { ...IMAGES.makeup, caption: "Palette work" },
-  { ...IMAGES.bridal, caption: "Bridal" },
-  { ...IMAGES.gold, caption: "The kit" },
-  { ...IMAGES.portrait, caption: "Natural finish" },
-  { ...IMAGES.salon, caption: "The studio" },
-];
+const gallery = SERVICE_WHEEL.map((item) => ({ ...item, caption: item.name }));
 
 export default function GalleryPage() {
   return (
@@ -39,7 +29,7 @@ export default function GalleryPage() {
       <PageHero
         eyebrow="Gallery"
         title="Soft light. Sharp mapping. Quiet luxury."
-        description="A taste of the finishes Ella creates — from weightless hybrids to bridal glam. Your set will be designed for your features, not copied from a grid."
+        description="Every photograph here is Ella’s own work — from weightless hybrids and lash lifts to bridal glam and face sculpt. Your set will be designed for your features, not copied from a grid."
         crumbs={[
           { name: "Home", href: "/" },
           { name: "Gallery", href: "/gallery" },

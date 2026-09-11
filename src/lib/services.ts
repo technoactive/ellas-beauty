@@ -34,8 +34,8 @@ export const serviceCategories: ServiceCategory[] = [
     intro:
       "Every set is designed around your eye shape, lifestyle and natural lash strength. Ella isolates each lash, chooses diameter with care, and never overloads — so the finish looks expensive, feels light, and lasts.",
     image:
-      "https://images.unsplash.com/photo-1512290923902-8a9f81dc236c?auto=format&fit=crop&w=1600&q=80",
-    imageAlt: "Lash technician isolating and applying extensions to a relaxed client",
+      "/images/work/russian-volume.jpg",
+    imageAlt: "Russian volume lash extensions by Ella’s Beauty — dense, fluffy, dark set",
     href: "/services/lashes",
     services: [
       {
@@ -147,8 +147,8 @@ export const serviceCategories: ServiceCategory[] = [
     intro:
       "Brows are architecture. Ella studies your bone structure, hair growth and skin tone, then sculpts a shape that looks like you — only more polished. From a 20-minute tidy to a full lamination, every finish is considered.",
     image:
-      "https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?auto=format&fit=crop&w=1600&q=80",
-    imageAlt: "Portrait with full, softly defined brows and natural makeup",
+      "/images/work/brow-lamination.jpg",
+    imageAlt: "Brow lamination by Ella’s Beauty — brushed-up, glossy, perfectly shaped brow",
     href: "/services/brows",
     services: [
       {
@@ -214,8 +214,8 @@ export const serviceCategories: ServiceCategory[] = [
     intro:
       "Makeup here is never mask-like. Ella builds from skin, sculpts the eye, and finishes with the exact level of drama you asked for — whether that is a polished daytime face or full bridal complex makeup.",
     image:
-      "https://images.unsplash.com/photo-1583241800698-e8ab01830a07?auto=format&fit=crop&w=1600&q=80",
-    imageAlt: "Makeup artist holding a neutral eyeshadow palette",
+      "/images/work/complex-makeup.jpg",
+    imageAlt: "Complex Arabic-style make-up by Ella’s Beauty — sculpted eye, sharp liner and glossy lip",
     href: "/services/makeup",
     services: [
       {
@@ -266,8 +266,8 @@ export const serviceCategories: ServiceCategory[] = [
     intro:
       "Treatments are chosen to lift, smooth and brighten — never to leave you red and overworked. Whether you have an hour or thirty minutes, the result is skin that looks like good sleep and good light.",
     image:
-      "https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=1600&q=80",
-    imageAlt: "Relaxing facial treatment for glowing skin",
+      "/images/work/face-sculpt.jpg",
+    imageAlt: "Non-surgical face sculpt before and after at Ella’s Beauty — lifted, glowing skin",
     href: "/services/skin",
     services: [
       {
@@ -317,8 +317,8 @@ export const serviceCategories: ServiceCategory[] = [
     intro:
       "Luxury should travel. Ella offers a complimentary consultation and patch test, then meets you in salon or at your own address. Mobile visits carry a travel fee so the treatment itself stays unhurried and precise — please contact us first to arrange one.",
     image:
-      "https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=1600&q=80",
-    imageAlt: "Calm, refined beauty salon interior",
+      "/images/work/deep-relax-ritual.jpg",
+    imageAlt: "Deep relax face ritual at Ella’s Beauty — client resting with red roses",
     href: "/services/mobile",
     services: [
       {

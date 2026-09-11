@@ -2,7 +2,7 @@ export const faqs = [
   {
     question: "Where is Ella’s Beauty in London?",
     answer:
-      "Ella works from Rush Salon at 186-188 West End Lane, West Hampstead, London NW6 1SG — a two-minute walk from West Hampstead Thameslink. Mobile appointments at your own address are also available; please contact us first to arrange one.",
+      "Ella works from Rush Salon at 186-188 West End Lane, West Hampstead, London NW6 1SG — a two-minute walk from West Hampstead Thameslink. Mobile appointments are also available all across London; please contact us first to arrange one.",
   },
   {
     question: "What are the opening hours?",
@@ -12,7 +12,7 @@ export const faqs = [
   {
     question: "Is Ella qualified and experienced?",
     answer:
-      "Yes. Ella has specialised in luxury lash, brow, skin and makeup services for over 8 years using organic Russian-made products. She trained at the Beauty Academy, completed 4 further courses and 6 masterclasses, and has won the Health & Beauty Awards (2019 and 2021), Innovative Lash Creator of the Year (2022) and the BABTAC & CIBTAC Awards (2023).",
+      "Yes. Ella has over 15 years of hands-on experience and has been fully qualified for over 8 years, specialising in luxury lash, brow, skin and makeup services with organic Russian-made products. She trained at the Beauty Academy, completed 4 further courses and 6 masterclasses, holds The Brow Detailist accredited diploma, and has won the Health & Beauty Awards (2019 and 2021), Best Brows at the Beauty Awards Moscow (2021), Most Innovative Beautician London (2021), Innovative Lash Creator of the Year (2022), the BABTAC & CIBTAC Awards (2023) and Best Lash Tech at the Lash Awards (2024). She also trains artists at the Ella’s Beauty Academy.",
   },
   {
     question: "Can you infill lashes done by another technician?",
@@ -52,12 +52,12 @@ export const faqs = [
   {
     question: "Do you offer mobile appointments?",
     answer:
-      "Yes. Ella can bring lash, brow, makeup or skin treatments to your own address; a £30 mobile add-on covers travel. For mobile appointments please contact us first — WhatsApp is quickest — so timing and location can be confirmed.",
+      "Yes. Ella can bring lash, brow, makeup or skin treatments to your own address anywhere in London; a £30 mobile add-on covers travel. For mobile appointments please contact us first — WhatsApp is quickest — so timing and location can be confirmed.",
   },
   {
     question: "What is your cancellation policy?",
     answer:
-      "Please give at least 48 hours’ notice to cancel or reschedule. Arriving more than 15 minutes late will result in the appointment being cancelled, as the diary time has been reserved for you. Late cancellations and no-shows may also be subject to the policy shown at checkout on Fresha.",
+      "A 30% deposit secures every appointment and the balance is paid on the day. You may reschedule once with at least 48 hours’ notice and the deposit carries over; cancellations, repeated rescheduling or no-shows forfeit the deposit. Arriving more than 15 minutes late may mean the appointment is cancelled and the deposit lost. Full terms are on the Terms & conditions page.",
   },
   {
     question: "Are treatments suitable during pregnancy?",
@@ -67,6 +67,6 @@ export const faqs = [
   {
     question: "How do I book?",
     answer:
-      "All appointments are confirmed instantly through Fresha. Choose your treatment, date and time, and you will receive a confirmation by email or text. Questions first? Message Ella on WhatsApp, on Instagram @iamellasbeauty, or email contact@ellas-beauty.co.uk.",
+      "All appointments are confirmed instantly through Fresha. Choose your treatment, date and time, and you will receive a confirmation by email or text. Questions first? Message Ella on WhatsApp, on Instagram @iamellasbeauty, call +44 7523 240023 or email contact@ellas-beauty.uk.",
   },
 ] as const;

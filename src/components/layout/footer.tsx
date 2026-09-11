@@ -25,8 +25,8 @@ export function Footer() {
           </p>
           <p className="mt-5 max-w-sm text-sm leading-7 text-muted">
             Award-winning lashes, brows, skin and makeup in West Hampstead, or
-            mobile at your own address. Over 8 years of precision, artistry and
-            luxury.
+            mobile all across London. Over 15 years of hands-on precision,
+            artistry and luxury.
           </p>
           <div className="mt-8 flex flex-wrap items-center gap-5">
             <BookButton />
@@ -62,11 +62,15 @@ export function Footer() {
               <br />
               {SITE.address.locality} {SITE.address.postalCode}
               <br />
-              <span className="text-muted">or mobile, at your own address</span>
+              <span className="text-muted">or mobile, all across London</span>
             </p>
             <p>
               <a className="hover:text-gold-deep" href={`mailto:${SITE.email}`}>
                 {SITE.email}
+              </a>
+              <br />
+              <a className="hover:text-gold-deep" href={SITE.phone.href}>
+                {SITE.phone.display}
               </a>
               <br />
               <a
@@ -85,6 +89,15 @@ export function Footer() {
                 rel="noopener noreferrer"
               >
                 {SITE.social.instagram.handle}
+              </a>
+              {" · "}
+              <a
+                className="hover:text-gold-deep"
+                href={SITE.social.tiktok.url}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                TikTok
               </a>
             </p>
           </address>

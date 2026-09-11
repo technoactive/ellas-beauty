@@ -51,15 +51,6 @@ export default function BookPage() {
                   <span>{policy}</span>
                 </li>
               ))}
-              <li className="flex gap-4">
-                <span className="gold-text shrink-0 font-script text-2xl leading-none">
-                  {String(SITE.policies.length + 1).padStart(2, "0")}
-                </span>
-                <span>
-                  New to tint, lift, lamination or extensions? Add the
-                  complimentary patch test 24–48 hours ahead.
-                </span>
-              </li>
             </ol>
             <div className="relative mt-8 flex flex-wrap items-center gap-4">
               <BookButton>Open Fresha diary</BookButton>

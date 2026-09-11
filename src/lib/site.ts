@@ -5,11 +5,16 @@ export const SITE = {
   url: "https://ellas-beauty.co.uk",
   locale: "en_GB",
   language: "en-GB",
-  tagline: "Let your eyes do the talking.",
+  tagline: "Embrace your beauty.",
   strapline: "Your lash, brow, skin specialist & make-up artist.",
   description:
-    "Award-winning luxury lashes, brows, skin and makeup in West Hampstead. Over 8 years of bespoke artistry by Ella using organic Russian-made products, in salon or mobile at your address.",
-  email: "contact@ellas-beauty.co.uk",
+    "Award-winning luxury lashes, brows, skin and makeup in West Hampstead. Over 15 years of hands-on artistry by Ella, in salon at Rush Salon or mobile across London.",
+  email: "contact@ellas-beauty.uk",
+  phone: {
+    display: "+44 7523 240023",
+    href: "tel:+447523240023",
+    e164: "+447523240023",
+  },
   bookingUrl:
     "https://www.fresha.com/en-GB/a/ellas-beauty-london-rush-hair-west-hampstead-186-188-west-end-lane-qq4f1g83?pId=1332797",
   rating: 4.9,
@@ -19,6 +24,11 @@ export const SITE = {
       label: "Instagram",
       handle: "@iamellasbeauty",
       url: "https://www.instagram.com/iamellasbeauty",
+    },
+    tiktok: {
+      label: "TikTok",
+      handle: "@ellasbeautylondon",
+      url: "https://www.tiktok.com/@ellasbeautylondon",
     },
     whatsapp: {
       label: "WhatsApp",
@@ -33,38 +43,230 @@ export const SITE = {
   },
   sameAs: [
     "https://www.instagram.com/iamellasbeauty",
+    "https://www.tiktok.com/@ellasbeautylondon",
     "https://www.fresha.com/en-GB/a/ellas-beauty-london-rush-hair-west-hampstead-186-188-west-end-lane-qq4f1g83",
   ],
   founder: {
     name: "Ella",
     role: "Lash, brow & skin specialist and make-up artist",
+    yearsHandsOn: 15,
     yearsExperience: 8,
+    headline: "Embrace your beauty",
     intro:
-      "My name is Ella and I specialise in luxury lash, brow, skin and makeup services using the highest-quality organic Russian-made products — for over 8 years.",
-    training:
-      "I trained at the Beauty Academy, then developed my craft through 4 further courses and 6 masterclasses.",
+      "My name is Ella — your beauty specialist. With over 15 years of hands-on experience and over 8 years fully qualified, I bring expert artistry and precision to every treatment.",
     promise:
-      "Whether you are looking for a bold new look or a subtle enhancement, I bring precision, artistry and luxury to every appointment.",
+      "Specialising in makeup, lashes, brows and skin, I’m dedicated to enhancing natural beauty with timeless, confidence-boosting results.",
+    training:
+      "I trained at the Beauty Academy, then developed my craft through 4 further courses and 6 masterclasses — and today I teach the next generation of lash and brow artists at the Ella’s Beauty Academy.",
     products: "Highest-quality organic Russian-made products",
     coursesCompleted: 4,
     masterclassesCompleted: 6,
   },
+  /** “My promise to you” — rendered as the promise wheel. */
+  promises: [
+    {
+      title: "A confidence boost that lasts",
+      body: "Results designed to still look expensive on week three, not just on the day.",
+    },
+    {
+      title: "Luxury-level service",
+      body: "A calm chair, unhurried appointments and the care reviewers call patient.",
+    },
+    {
+      title: "Effortless beauty, every day",
+      body: "Lashes, brows and skin that let you wake up ready — no mascara required.",
+    },
+    {
+      title: "Advanced techniques & premium products",
+      body: "Fine-diameter, organic Russian-made lashes and the newest mapping methods.",
+    },
+    {
+      title: "Expert-led education",
+      body: "Honest advice on what suits your eyes, plus an Academy training future artists.",
+    },
+    {
+      title: "A moment just for you",
+      body: "Ninety minutes of quiet, music and hands that treat your face as their own.",
+    },
+  ],
+  /** The four facts shown straight after the hero. */
+  facts: [
+    { title: "Open Monday to Sunday", detail: "Late evenings until 10pm" },
+    { title: "Rush Salon, West Hampstead", detail: "186-188 West End Lane, NW6 1SG" },
+    { title: "Mobile across London", detail: "The same standard, at your address" },
+    { title: "Certified & accredited", detail: "Award-winning, fully insured" },
+  ],
   awards: [
     { year: "2019", title: "Health & Beauty Awards", detail: "Winner" },
     { year: "2021", title: "Health & Beauty Awards", detail: "Winner" },
+    { year: "2021", title: "Best Brows — Beauty Awards, Moscow", detail: "Winner" },
+    { year: "2021", title: "Most Innovative Beautician, London", detail: "Winner" },
     { year: "2022", title: "Innovative Lash Creator of the Year", detail: "Winner" },
     { year: "2023", title: "BABTAC & CIBTAC Awards", detail: "Winner" },
+    { year: "2024", title: "Lash Awards — Best Lash Tech", detail: "Winner" },
   ],
+  /** Photographed trophies and certificates for “Qualified. Certified. Recognised.” */
+  credentials: [
+    {
+      src: "/images/credentials/lash-awards-2024.jpg",
+      alt: "Lash Awards 2024 trophy — Best Lash Tech, awarded to Ella’s Beauty",
+      title: "Best Lash Tech",
+      detail: "Lash Awards 2024",
+      kind: "Award",
+    },
+    {
+      src: "/images/credentials/best-brows-moscow-2021.jpg",
+      alt: "Best Brows trophy — Beauty Awards Moscow 2021",
+      title: "Best Brows",
+      detail: "Beauty Awards, Moscow 2021",
+      kind: "Award",
+    },
+    {
+      src: "/images/credentials/most-innovative-beautician-2021.jpg",
+      alt: "Most Innovative Beautician trophy — London 2021",
+      title: "Most Innovative Beautician",
+      detail: "London 2021",
+      kind: "Award",
+    },
+    {
+      src: "/images/credentials/brow-detailist-certificate.jpg",
+      alt: "The Brow Detailist accredited certificate diploma presented to Ella’s Beauty, September 2022",
+      title: "The Brow Detailist",
+      detail: "Accredited diploma, 2022",
+      kind: "Certificate",
+    },
+  ],
+  /** Short booking rules shown on the Book page (summary of the full T&Cs). */
   policies: [
-    "Arriving more than 15 minutes late will result in the appointment being cancelled.",
-    "All clients must arrive with clean lashes and no makeup or mascara on.",
-    "Infills require a minimum of 50% of lashes remaining and must be booked within 1–3 weeks of your last appointment.",
-    "Infills are not carried out on another technician’s work — a removal and a new set are required.",
-    "Please do not wear contact lenses during your appointment.",
-    "Please give 48 hours’ notice if you wish to cancel or reschedule.",
+    "A 30% deposit secures your appointment; the balance is paid on the day.",
+    "Reschedule once with at least 48 hours’ notice and your deposit carries over.",
+    "Arriving more than 15 minutes late may mean the appointment is cancelled and the deposit forfeited.",
+    "Lash infills must be within three weeks of your last appointment with at least 50% of extensions remaining.",
+    "Please tell Ella about allergies, medical conditions, medications or recent procedures before treatment.",
+    "Complete any recommended patch test within the advised timeframe before your appointment.",
+    "Clients under 18 must attend with a parent or legal guardian.",
     "For mobile appointments at your own address, please contact us first.",
   ],
-  locationNote: "Rush Salon, 186-188 West End Lane, NW6 1SG — or mobile, at your own address.",
+  /** Full Terms & Conditions, rendered on /terms. */
+  termsIntro:
+    "By booking an appointment with Ella’s Beauty, you confirm that you have read, understood and agreed to the following Terms & Conditions.",
+  terms: [
+    {
+      title: "Bookings & deposits",
+      clauses: [
+        "A 30% deposit is required to secure all appointments. Your appointment is not confirmed until the required deposit has been received.",
+        "Deposits are used to reserve your appointment time and are non-refundable, subject to your statutory rights.",
+        "The remaining balance is payable on the day of your appointment.",
+      ],
+    },
+    {
+      title: "Rescheduling & cancellations",
+      clauses: [
+        "Appointments may be rescheduled once, provided a minimum of 48 hours’ notice is given.",
+        "Where sufficient notice is provided, your deposit may be transferred to the new appointment.",
+        "Cancellations, repeated rescheduling or failure to attend an appointment will result in the loss of the deposit. A new deposit may be required before another appointment can be booked.",
+        "If Ella’s Beauty needs to cancel or rearrange your appointment, you will be offered an alternative appointment or a refund of any amount paid where appropriate.",
+      ],
+    },
+    {
+      title: "Late arrivals",
+      clauses: [
+        "Please arrive on time for your appointment.",
+        "Clients arriving more than 15 minutes late may have their appointment cancelled, as there may no longer be enough time to complete the treatment safely and without affecting other clients.",
+        "Where an appointment is cancelled due to late arrival, the deposit will be forfeited.",
+      ],
+    },
+    {
+      title: "Lash extension infills",
+      clauses: [
+        "Lash extension infills can only be booked within a maximum of three weeks from your previous appointment and require at least 50% of the extensions to be remaining.",
+        "If there are insufficient lashes remaining, or the existing extensions require significant removal or correction, the appointment may need to be changed to a full set and the relevant price will apply.",
+      ],
+    },
+    {
+      title: "Treatment suitability & medical information",
+      clauses: [
+        "Clients are responsible for informing Ella’s Beauty of any allergies, sensitivities, medical conditions, medications, recent procedures or other information that may affect the suitability of a treatment.",
+        "Ella’s Beauty reserves the right to refuse, modify, postpone or discontinue a treatment where it is considered unsuitable, unsafe or not in the client’s best interests.",
+        "Where appropriate, an alternative treatment may be recommended.",
+      ],
+    },
+    {
+      title: "Allergies, reactions & patch testing",
+      clauses: [
+        "Although professional products and techniques are used, individual reactions and sensitivities can occur.",
+        "Where a patch test is recommended or required, clients must complete this within the advised timeframe before treatment.",
+        "Clients should contact Ella’s Beauty as soon as possible if they experience an unexpected reaction following a treatment and seek appropriate medical advice where necessary.",
+      ],
+    },
+    {
+      title: "Treatment results",
+      clauses: [
+        "Treatment results can vary between clients depending on factors including natural lashes, skin type, hair growth, lifestyle, aftercare and individual response to products.",
+        "Reference photographs or previous results are used as guidance only and an identical result cannot be guaranteed.",
+      ],
+    },
+    {
+      title: "Aftercare",
+      clauses: [
+        "Clients are responsible for following the aftercare advice provided following their treatment.",
+        "Ella’s Beauty cannot be held responsible for reduced longevity or changes to the treatment result caused by failure to follow aftercare instructions, interference with the treated area or circumstances outside our reasonable control.",
+      ],
+    },
+    {
+      title: "Minors",
+      clauses: [
+        "Clients under the age of 18 must attend with a parent or legal guardian. Certain treatments may not be available to clients under 18.",
+      ],
+    },
+    {
+      title: "Complaints & concerns",
+      clauses: [
+        "If you have any concerns regarding your treatment, please contact Ella’s Beauty as soon as possible after your appointment so the issue can be assessed.",
+        "Where appropriate, you may be asked to return for an in-person assessment before a solution can be offered.",
+        "Any corrective treatment, adjustment, credit or other resolution will be considered based on the individual circumstances.",
+      ],
+    },
+    {
+      title: "Behaviour & right to refuse service",
+      clauses: [
+        "Ella’s Beauty reserves the right to refuse or discontinue service in cases of abusive, threatening, inappropriate or disrespectful behaviour, or where continuing a treatment would create a health or safety concern.",
+      ],
+    },
+    {
+      title: "Personal belongings",
+      clauses: [
+        "Clients are responsible for their personal belongings while attending appointments. Ella’s Beauty cannot accept responsibility for lost, damaged or forgotten personal items except where liability cannot legally be excluded.",
+      ],
+    },
+    {
+      title: "Photography",
+      clauses: [
+        "Photographs or videos of treatments and results will only be used for marketing or social media purposes where the client has given permission.",
+        "You may withdraw permission for future use by contacting Ella’s Beauty.",
+      ],
+    },
+    {
+      title: "Website information",
+      clauses: [
+        "We aim to ensure that treatment descriptions, prices and information displayed on our website are accurate and up to date. However, services, prices and availability may occasionally change.",
+        "Where there is an obvious pricing or information error, Ella’s Beauty reserves the right to correct it before the treatment takes place.",
+      ],
+    },
+    {
+      title: "Your statutory rights",
+      clauses: [
+        "Nothing within these Terms & Conditions is intended to limit or exclude any rights you may have under applicable UK consumer law.",
+      ],
+    },
+    {
+      title: "Acceptance of terms",
+      clauses: [
+        "By booking an appointment, paying a deposit or proceeding with a treatment, you acknowledge that you have read and agreed to these Terms & Conditions.",
+      ],
+    },
+  ],
+  locationNote: "Rush Salon, 186-188 West End Lane, NW6 1SG — or mobile, anywhere in London.",
   address: {
     street: "Rush Salon, 186-188 West End Lane",
     locality: "London",
@@ -108,55 +310,146 @@ export const SITE = {
   ],
 } as const;
 
+/** Real photographs of Ella’s work, served from /public/images/work. */
+export const WORK = {
+  browLamination: {
+    src: "/images/work/brow-lamination.jpg",
+    alt: "Brow lamination by Ella’s Beauty — brushed-up, glossy, perfectly shaped brow",
+    name: "Brow lamination",
+    href: "/services/brows",
+  },
+  browHenna: {
+    src: "/images/work/brow-henna.jpg",
+    alt: "Brow henna by Ella’s Beauty — defined, tinted brows with a soft ombré finish",
+    name: "Brow henna",
+    href: "/services/brows",
+  },
+  lashLift: {
+    src: "/images/work/lash-lift.jpg",
+    alt: "Lash lift before and after by Ella’s Beauty — natural lashes curled and tinted",
+    name: "Lash lift",
+    href: "/services/lashes",
+  },
+  hybridLashes: {
+    src: "/images/work/hybrid-lashes.jpg",
+    alt: "Hybrid lash extensions by Ella’s Beauty — soft, textured, natural-looking set",
+    name: "Hybrid lashes",
+    href: "/services/lashes",
+  },
+  russianVolume: {
+    src: "/images/work/russian-volume.jpg",
+    alt: "Russian volume lash extensions by Ella’s Beauty — dense, fluffy, dark set",
+    name: "Russian volume lashes",
+    href: "/services/lashes",
+  },
+  megaVolume: {
+    src: "/images/work/mega-volume.jpg",
+    alt: "Mega volume lash extensions by Ella’s Beauty — dramatic, full-bodied set",
+    name: "Mega volume lashes",
+    href: "/services/lashes",
+  },
+  kendallLashes: {
+    src: "/images/work/kendall-lashes.jpg",
+    alt: "Kendall cat-eye lash extensions by Ella’s Beauty — elongated outer corner",
+    name: "Kendall lashes",
+    href: "/services/lashes",
+  },
+  kimKLashes: {
+    src: "/images/work/kim-k-lashes.jpg",
+    alt: "Kim K lash extensions by Ella’s Beauty — wispy spikes on a volume base",
+    name: "Kim K lashes",
+    href: "/services/lashes",
+  },
+  wispyLashes: {
+    src: "/images/work/wispy-lashes.jpg",
+    alt: "Wispy lash extensions by Ella’s Beauty — feathered, textured spikes",
+    name: "Wispy lashes",
+    href: "/services/lashes",
+  },
+  customLashes: {
+    src: "/images/work/custom-lashes.jpg",
+    alt: "Custom-mapped lash extensions by Ella’s Beauty — light, natural set on fair lashes",
+    name: "Custom lashes",
+    href: "/services/lashes",
+  },
+  classicMakeup: {
+    src: "/images/work/classic-makeup.jpg",
+    alt: "Classic make-up by Ella’s Beauty — warm bronze tones, soft glam and glossy lip",
+    name: "Classic make-up",
+    href: "/services/makeup",
+  },
+  complexMakeup: {
+    src: "/images/work/complex-makeup.jpg",
+    alt: "Complex Arabic-style make-up by Ella’s Beauty — sculpted eye, sharp liner and glossy lip",
+    name: "Complex / Arabic make-up",
+    href: "/services/makeup",
+  },
+  bridalMakeup: {
+    src: "/images/work/bridal-makeup.jpg",
+    alt: "Bridal make-up by Ella’s Beauty — graphic winged liner with luminous skin",
+    name: "Bridal make-up",
+    href: "/services/makeup",
+  },
+  dermaplaning: {
+    src: "/images/work/dermaplaning.jpg",
+    alt: "Dermaplaning treatment in progress at Ella’s Beauty",
+    name: "Dermaplaning",
+    href: "/services/skin",
+  },
+  faceSculpt: {
+    src: "/images/work/face-sculpt.jpg",
+    alt: "Non-surgical face sculpt before and after at Ella’s Beauty — lifted, glowing skin",
+    name: "Non-surgical face sculpt",
+    href: "/services/skin",
+  },
+  deepRelaxRitual: {
+    src: "/images/work/deep-relax-ritual.jpg",
+    alt: "Deep relax face ritual at Ella’s Beauty — client resting with red roses",
+    name: "Deep relax face ritual",
+    href: "/services/skin",
+  },
+  swarovskiDetails: {
+    src: "/images/work/swarovski-details.jpg",
+    alt: "Swarovski crystal details on lash extensions by Ella’s Beauty",
+    name: "Swarovski details",
+    href: "/services/lashes",
+  },
+} as const;
+
+/** Order of the treatments wheel on the homepage. */
+export const SERVICE_WHEEL = [
+  WORK.browLamination,
+  WORK.browHenna,
+  WORK.lashLift,
+  WORK.hybridLashes,
+  WORK.russianVolume,
+  WORK.megaVolume,
+  WORK.kendallLashes,
+  WORK.kimKLashes,
+  WORK.wispyLashes,
+  WORK.customLashes,
+  WORK.classicMakeup,
+  WORK.complexMakeup,
+  WORK.bridalMakeup,
+  WORK.dermaplaning,
+  WORK.faceSculpt,
+  WORK.deepRelaxRitual,
+  WORK.swarovskiDetails,
+] as const;
+
 export const IMAGES = {
-  hero: {
-    src: "https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?auto=format&fit=crop&w=2400&q=80",
-    alt: "Close-up of expertly applied makeup and defined lashes",
-  },
-  lashes: {
-    src: "https://images.unsplash.com/photo-1512290923902-8a9f81dc236c?auto=format&fit=crop&w=1600&q=80",
-    alt: "Lash technician isolating and applying extensions to a relaxed client",
-  },
-  brows: {
-    src: "https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?auto=format&fit=crop&w=1600&q=80",
-    alt: "Portrait with full, softly defined brows and natural makeup",
-  },
-  makeup: {
-    src: "https://images.unsplash.com/photo-1583241800698-e8ab01830a07?auto=format&fit=crop&w=1600&q=80",
-    alt: "Makeup artist holding a neutral eyeshadow palette",
-  },
-  skin: {
-    src: "https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=1600&q=80",
-    alt: "Relaxing facial treatment for glowing skin",
-  },
-  portrait: {
-    src: "https://images.unsplash.com/photo-1509967419530-da38b4704bc6?auto=format&fit=crop&w=1600&q=80",
-    alt: "Portrait of a woman with luminous skin and defined features",
-  },
-  salon: {
-    src: "https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=1600&q=80",
-    alt: "Calm, refined beauty salon interior",
-  },
-  glam: {
-    src: "https://images.unsplash.com/photo-1519699047748-de8e457a634e?auto=format&fit=crop&w=1600&q=80",
-    alt: "Editorial beauty portrait with glowing skin and soft brows",
-  },
-  eyes: {
-    src: "https://images.unsplash.com/photo-1512290923902-8a9f81dc236c?auto=format&fit=crop&w=1600&q=80",
-    alt: "Lash extensions being applied with precision tweezers",
-  },
-  bridal: {
-    src: "https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1600&q=80",
-    alt: "Bridal beauty and makeup preparation",
-  },
-  gold: {
-    src: "https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&w=1600&q=80",
-    alt: "Luxury makeup edit laid out on marble",
-  },
-  spa: {
-    src: "https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=1600&q=80",
-    alt: "Spa facial massage in a calm treatment room",
-  },
+  hero: WORK.classicMakeup,
+  lashes: WORK.russianVolume,
+  brows: WORK.browLamination,
+  makeup: WORK.complexMakeup,
+  skin: WORK.faceSculpt,
+  portrait: WORK.deepRelaxRitual,
+  salon: WORK.dermaplaning,
+  glam: WORK.bridalMakeup,
+  eyes: WORK.kimKLashes,
+  bridal: WORK.bridalMakeup,
+  gold: WORK.swarovskiDetails,
+  spa: WORK.deepRelaxRitual,
 } as const;
 
 export const NAV = [

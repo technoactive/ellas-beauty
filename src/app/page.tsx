@@ -1,8 +1,10 @@
 import { Hero } from "@/components/home/hero";
 import { TrustBar } from "@/components/home/trust-bar";
+import { ServicesWheel } from "@/components/home/services-wheel";
+import { PromiseWheel } from "@/components/home/promise-wheel";
 import { ServicesPreview } from "@/components/home/services-preview";
-import { WhyElla } from "@/components/home/why-ella";
 import { AboutPreview } from "@/components/home/about-preview";
+import { Credentials } from "@/components/home/credentials";
 import { ReviewsPreview } from "@/components/home/reviews-preview";
 import { GalleryPreview } from "@/components/home/gallery-preview";
 import { VisitPreview } from "@/components/home/visit-preview";
@@ -24,9 +26,11 @@ export default function Home() {
       <JsonLd data={faqJsonLd()} />
       <Hero />
       <TrustBar />
+      <ServicesWheel />
+      <PromiseWheel />
       <ServicesPreview />
-      <WhyElla />
       <AboutPreview />
+      <Credentials className="py-10 sm:py-14" />
       <ReviewsPreview />
       <GalleryPreview />
       <VisitPreview />

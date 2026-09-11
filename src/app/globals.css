@@ -8,6 +8,8 @@
   --ink-soft: #3d3428;
   --muted: #6d6254;
   --line: rgba(166, 129, 58, 0.45);
+  /* top bar 34px + gold bar 3px + nav row 72px + hairline 1px */
+  --header-h: 110px;
   --gold: #c4a056;
   --gold-deep: #8c6a24;
   --gold-light: #e8d5a3;
@@ -200,6 +202,62 @@ body {
 
 .animate-marquee {
   animation: marquee var(--duration) linear infinite;
+}
+
+/* Promise wheel: slow orbit, items counter-rotate so text stays upright */
+@keyframes orbit {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes orbit-reverse {
+  to {
+    transform: rotate(-360deg);
+  }
+}
+
+.wheel-ring {
+  animation: orbit var(--wheel-duration, 80s) linear infinite;
+}
+
+.wheel-item {
+  animation: orbit-reverse var(--wheel-duration, 80s) linear infinite;
+}
+
+.wheel:hover .wheel-ring,
+.wheel:hover .wheel-item,
+.wheel:focus-within .wheel-ring,
+.wheel:focus-within .wheel-item {
+  animation-play-state: paused;
+}
+
+/* Butterfly wings beat around the body axis */
+@keyframes flutter {
+  0%,
+  100% {
+    transform: scaleX(1);
+  }
+  50% {
+    transform: scaleX(0.55);
+  }
+}
+
+.wing {
+  transform-box: view-box;
+  transform-origin: 50% 50%;
+  animation: flutter var(--flutter-duration, 3.2s) ease-in-out infinite;
+  animation-delay: var(--flutter-delay, 0s);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .wheel-ring,
+  .wheel-item,
+  .wing,
+  .animate-marquee,
+  .animate-marquee-vertical {
+    animation: none;
+  }
 }
 
 .animate-marquee-vertical {

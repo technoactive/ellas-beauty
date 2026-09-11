@@ -4,8 +4,9 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "motion/react";
+import { Mail, Phone } from "lucide-react";
 import { Logo } from "@/components/brand/logo";
-import { SocialLinks } from "@/components/brand/social-links";
+import { SOCIAL_ITEMS, SocialLinks } from "@/components/brand/social-links";
 import { NAV, SITE } from "@/lib/site";
 import { cn } from "@/lib/utils";
 
@@ -50,6 +51,48 @@ function NavLink({
   );
 }
 
+function TopBar() {
+  return (
+    <div className="bg-ink text-[#f3eadc]">
+      <div className="mx-auto flex h-[34px] max-w-7xl items-center justify-between gap-3 px-4 sm:px-8">
+        <div className="flex min-w-0 items-center gap-2.5 text-[0.6rem] tracking-[0.08em] sm:gap-4 sm:text-[0.62rem] sm:tracking-[0.22em]">
+          <a
+            href={`mailto:${SITE.email}`}
+            className="flex min-w-0 items-center gap-2 transition-colors hover:text-gold-light"
+          >
+            <Mail className="size-3 shrink-0 text-gold" aria-hidden />
+            <span className="truncate">{SITE.email}</span>
+          </a>
+          <span className="h-3 w-px shrink-0 bg-gold/50" aria-hidden />
+          <a
+            href={SITE.phone.href}
+            className="flex shrink-0 items-center gap-2 transition-colors hover:text-gold-light"
+          >
+            <Phone className="size-3 text-gold" aria-hidden />
+            <span className="hidden sm:inline">{SITE.phone.display}</span>
+            <span className="sm:hidden">Call</span>
+          </a>
+        </div>
+        <ul className="flex shrink-0 items-center gap-0.5 sm:gap-1" aria-label="Follow Ella’s Beauty">
+          {SOCIAL_ITEMS.map(({ key, Icon, label, handle, url }) => (
+            <li key={key}>
+              <a
+                href={url}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={`${label}: ${handle}`}
+                className="flex size-7 items-center justify-center rounded-full text-gold-light transition-colors hover:bg-gold/20 hover:text-[#fffaf0]"
+              >
+                <Icon className="size-3.5" />
+              </a>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </div>
+  );
+}
+
 export function Header() {
   const [open, setOpen] = useState(false);
   const pathname = usePathname();
@@ -75,6 +118,7 @@ export function Header() {
     <>
       <header className="fixed inset-x-0 top-0 z-50">
         <div className="bg-ivory/92 backdrop-blur-md">
+          <TopBar />
           <div className="h-[3px] bg-[linear-gradient(90deg,#8c6a24,#e8d5a3,#c4a056,#f3e2b8,#8c6a24)]" aria-hidden />
           <div className="mx-auto grid h-[72px] max-w-7xl grid-cols-[1fr_auto_1fr] items-center px-5 sm:px-8">
             <nav className="hidden items-center gap-2 lg:flex" aria-label="Primary left">
@@ -156,7 +200,7 @@ export function Header() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.35, ease: "easeOut" }}
-            className="fixed inset-0 z-40 flex flex-col bg-ivory pt-[76px]"
+            className="fixed inset-0 z-40 flex flex-col bg-ivory pt-(--header-h)"
           >
             <span
               aria-hidden
@@ -212,7 +256,7 @@ export function Header() {
                 <p className="text-[0.66rem] leading-6 tracking-[0.16em] text-muted uppercase">
                   Rush Salon · 186-188 West End Lane · NW6 1SG
                   <br />
-                  or mobile, at your own address
+                  or mobile, all across London
                 </p>
                 <SocialLinks />
               </div>

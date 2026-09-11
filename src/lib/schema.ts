@@ -28,6 +28,7 @@ export function beautySalonJsonLd() {
     image: [`${SITE.url}/opengraph-image`],
     description: SITE.description,
     email: SITE.email,
+    telephone: SITE.phone.e164,
     priceRange: "££",
     currenciesAccepted: "GBP",
     paymentAccepted: "Cash, Card, Fresha",
@@ -98,8 +99,9 @@ export function personJsonLd() {
     description: `${SITE.founder.intro} ${SITE.founder.training}`,
     url: `${SITE.url}/about`,
     worksFor: { "@id": `${SITE.url}/#salon` },
-    sameAs: [SITE.social.instagram.url],
+    sameAs: [SITE.social.instagram.url, SITE.social.tiktok.url],
     award: SITE.awards.map((award) => `${award.title} ${award.year}`),
+    image: `${SITE.url}${SITE.credentials[0].src}`,
     alumniOf: { "@type": "EducationalOrganization", name: "Beauty Academy" },
     knowsAbout: [
       "Eyelash extensions",

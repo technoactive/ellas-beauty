@@ -17,7 +17,7 @@ export function PageHero({
   className?: string;
 }) {
   return (
-    <div className={cn("relative overflow-hidden pt-[76px]", className)}>
+    <div className={cn("relative overflow-hidden pt-(--header-h)", className)}>
       <span
         aria-hidden
         className="pointer-events-none absolute -right-6 top-20 select-none font-script text-[10rem] leading-none text-gold/20 sm:text-[16rem]"

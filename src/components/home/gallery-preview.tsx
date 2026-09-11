@@ -1,14 +1,14 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Container, Eyebrow, Section } from "@/components/ui/section";
-import { IMAGES } from "@/lib/site";
+import { WORK } from "@/lib/site";
 
 const tiles = [
-  { image: IMAGES.eyes, caption: "Lash application", span: "sm:col-span-5 sm:row-span-2", ratio: "aspect-[4/5]" },
-  { image: IMAGES.glam, caption: "Editorial skin", span: "sm:col-span-4", ratio: "aspect-[4/3]" },
-  { image: IMAGES.gold, caption: "The kit", span: "sm:col-span-3", ratio: "aspect-[4/3]" },
-  { image: IMAGES.makeup, caption: "Palette", span: "sm:col-span-3", ratio: "aspect-[4/3]" },
-  { image: IMAGES.bridal, caption: "Bridal", span: "sm:col-span-4", ratio: "aspect-[4/3]" },
+  { image: WORK.bridalMakeup, caption: WORK.bridalMakeup.name, span: "sm:col-span-5 sm:row-span-2", ratio: "aspect-[4/5]" },
+  { image: WORK.megaVolume, caption: WORK.megaVolume.name, span: "sm:col-span-4", ratio: "aspect-[4/3]" },
+  { image: WORK.browHenna, caption: WORK.browHenna.name, span: "sm:col-span-3", ratio: "aspect-[4/3]" },
+  { image: WORK.swarovskiDetails, caption: WORK.swarovskiDetails.name, span: "sm:col-span-3", ratio: "aspect-[4/3]" },
+  { image: WORK.kendallLashes, caption: WORK.kendallLashes.name, span: "sm:col-span-4", ratio: "aspect-[4/3]" },
 ];
 
 export function GalleryPreview() {
