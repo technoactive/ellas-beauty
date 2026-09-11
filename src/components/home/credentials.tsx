@@ -99,36 +99,68 @@ export function Credentials({ className }: { className?: string }) {
                 </BlurFade>
               ))}
 
-              {certificates.map((item, index) => (
-                <BlurFade key={item.src} delay={0.3 + 0.08 * index} className="sm:col-span-2">
-                  <figure className="grid gap-5 sm:grid-cols-[minmax(0,14rem)_1fr] sm:items-center">
-                    <div className="gold-frame mx-auto w-full max-w-[14rem]">
-                      <div className="relative aspect-[3/4] overflow-hidden bg-[#fbf7f0]">
-                        <Image
-                          src={item.src}
-                          alt={item.alt}
-                          fill
-                          sizes="14rem"
-                          className="object-cover"
-                        />
-                      </div>
-                    </div>
-                    <figcaption className="text-center sm:text-left">
-                      <p className="text-[0.62rem] tracking-[0.3em] text-gold-light uppercase">
-                        {item.kind}
-                      </p>
-                      <p className="mt-2 font-serif text-2xl text-ivory">{item.title}</p>
-                      <p className="mt-1 text-sm text-ivory/70">{item.detail}</p>
-                      <p className="mt-4 max-w-sm text-sm leading-7 text-ivory/60">
-                        Accredited training is renewed continually — every new
-                        technique on the menu is learned, examined and practised
-                        before it reaches a client.
-                      </p>
-                    </figcaption>
-                  </figure>
-                </BlurFade>
-              ))}
             </div>
+          </div>
+
+          <div className="relative mt-16 border-t border-gold/30 pt-12">
+            <div className="grid gap-6 lg:grid-cols-12 lg:items-end">
+              <div className="lg:col-span-7">
+                <div className="flex items-center gap-4">
+                  <span className="h-px w-12 bg-gold" aria-hidden />
+                  <p className="text-[0.66rem] tracking-[0.42em] text-gold-light uppercase">
+                    Certificates
+                  </p>
+                </div>
+                <h3 className="mt-5 font-serif text-3xl leading-[1.05] text-ivory sm:text-4xl">
+                  {certificates.length} accredited courses,{" "}
+                  <span className="gold-text italic">2017 to today.</span>
+                </h3>
+              </div>
+              <p className="max-w-sm text-sm leading-7 text-ivory/60 lg:col-span-5 lg:justify-self-end lg:text-right">
+                Training is renewed continually — every technique on the menu
+                is learned, examined and practised before it reaches a client.
+              </p>
+            </div>
+
+            <ul className="mt-10 grid grid-flow-dense grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
+              {certificates.map((item, index) => {
+                const portrait = item.orientation === "portrait";
+                return (
+                  <li
+                    key={item.src}
+                    className={portrait ? "sm:row-span-2 flex" : "flex"}
+                  >
+                    <BlurFade delay={0.06 * index} className="flex w-full flex-col">
+                      <figure className="group flex h-full flex-col">
+                        <div className="gold-frame flex flex-1 flex-col">
+                          <div
+                            className={`relative flex-1 overflow-hidden bg-[#fbf7f0] ${
+                              portrait ? "aspect-[5/7] sm:aspect-auto sm:min-h-full" : "aspect-[7/5]"
+                            }`}
+                          >
+                            <Image
+                              src={item.src}
+                              alt={item.alt}
+                              fill
+                              sizes="(max-width: 640px) 90vw, (max-width: 1024px) 45vw, 30vw"
+                              className="object-cover transition-transform duration-700 group-hover:scale-[1.03]"
+                            />
+                          </div>
+                        </div>
+                        <figcaption className="mt-3 flex flex-col gap-0.5 px-2">
+                          <span className="font-serif text-base leading-snug text-ivory">
+                            {item.title}
+                          </span>
+                          <span className="text-[0.58rem] tracking-[0.24em] text-gold-light/80 uppercase">
+                            {item.detail}
+                          </span>
+                        </figcaption>
+                      </figure>
+                    </BlurFade>
+                  </li>
+                );
+              })}
+            </ul>
           </div>
         </div>
       </Container>
