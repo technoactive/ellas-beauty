@@ -54,14 +54,16 @@ export default function AboutPage() {
       />
       <Section className="pt-4">
         <Container className="grid items-center gap-12 lg:grid-cols-2">
-          <div className="relative overflow-hidden rounded-[1.6rem]">
-            <Image
-              src={IMAGES.salon.src}
-              alt={IMAGES.salon.alt}
-              width={1000}
-              height={1200}
-              className="h-auto w-full object-cover"
-            />
+          <div className="gold-frame">
+            <div className="relative overflow-hidden">
+              <Image
+                src={IMAGES.salon.src}
+                alt={IMAGES.salon.alt}
+                width={1000}
+                height={1200}
+                className="h-auto w-full object-cover"
+              />
+            </div>
           </div>
           <div className="space-y-5 text-base leading-8 text-ink-soft">
             <p>

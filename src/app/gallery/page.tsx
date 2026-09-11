@@ -16,15 +16,15 @@ export const metadata: Metadata = pageMetadata({
 });
 
 const gallery = [
-  IMAGES.lashes,
-  IMAGES.eyes,
-  IMAGES.glam,
-  IMAGES.skin,
-  IMAGES.makeup,
-  IMAGES.bridal,
-  IMAGES.portrait,
-  IMAGES.salon,
-  IMAGES.spa,
+  { ...IMAGES.lashes, caption: "Lash application" },
+  { ...IMAGES.brows, caption: "Brow definition" },
+  { ...IMAGES.glam, caption: "Editorial skin" },
+  { ...IMAGES.skin, caption: "Face sculpt ritual" },
+  { ...IMAGES.makeup, caption: "Palette work" },
+  { ...IMAGES.bridal, caption: "Bridal" },
+  { ...IMAGES.gold, caption: "The kit" },
+  { ...IMAGES.portrait, caption: "Natural finish" },
+  { ...IMAGES.salon, caption: "The studio" },
 ];
 
 export default function GalleryPage() {
@@ -47,17 +47,25 @@ export default function GalleryPage() {
       />
       <Section className="pt-4">
         <Container>
-          <div className="columns-1 gap-4 sm:columns-2 lg:columns-3">
-            {gallery.map((image) => (
-              <figure key={image.src} className="mb-4 break-inside-avoid">
-                <Image
-                  src={image.src}
-                  alt={image.alt}
-                  width={800}
-                  height={1000}
-                  className="h-auto w-full rounded-2xl object-cover"
-                />
-                <figcaption className="sr-only">{image.alt}</figcaption>
+          <div className="columns-1 gap-6 sm:columns-2 lg:columns-3">
+            {gallery.map((image, index) => (
+              <figure key={image.src} className="group mb-8 break-inside-avoid">
+                <div className="gold-frame">
+                  <div className="overflow-hidden">
+                    <Image
+                      src={image.src}
+                      alt={image.alt}
+                      width={800}
+                      height={1000}
+                      sizes="(max-width: 640px) 90vw, (max-width: 1024px) 45vw, 30vw"
+                      className="h-auto w-full object-cover transition-transform duration-700 group-hover:scale-[1.03]"
+                    />
+                  </div>
+                </div>
+                <figcaption className="mt-3 flex items-center justify-between px-2 text-[0.6rem] tracking-[0.26em] text-gold-deep uppercase">
+                  <span>Plate {String(index + 1).padStart(2, "0")}</span>
+                  <span className="text-muted">{image.caption}</span>
+                </figcaption>
               </figure>
             ))}
           </div>

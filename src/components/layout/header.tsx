@@ -27,19 +27,24 @@ function NavLink({
   return (
     <Link
       href={href}
+      aria-current={active ? "page" : undefined}
       className={cn(
-        "group relative py-2 text-[0.68rem] tracking-[0.3em] uppercase transition-colors",
-        active ? "text-gold-deep" : "text-ink-soft/80 hover:text-gold-deep",
+        "group relative inline-flex items-center gap-2 rounded-full px-3.5 py-2 text-[0.68rem] tracking-[0.3em] uppercase transition-all duration-300",
+        active
+          ? "bg-gold/12 text-gold-deep"
+          : "text-ink-soft/80 hover:bg-gold/10 hover:text-gold-deep",
       )}
     >
-      {label}
       <span
         aria-hidden
         className={cn(
-          "absolute inset-x-0 -bottom-0.5 h-px origin-left bg-gold transition-transform duration-300",
-          active ? "scale-x-100" : "scale-x-0 group-hover:scale-x-100",
+          "size-1.5 rounded-full bg-[linear-gradient(135deg,#f3e2b8,#c4a056,#8c6a24)] transition-all duration-300",
+          active
+            ? "scale-100 opacity-100"
+            : "scale-0 opacity-0 group-hover:scale-100 group-hover:opacity-100",
         )}
       />
+      {label}
     </Link>
   );
 }
@@ -71,7 +76,7 @@ export function Header() {
         <div className="bg-ivory/92 backdrop-blur-md">
           <div className="h-[3px] bg-[linear-gradient(90deg,#8c6a24,#e8d5a3,#c4a056,#f3e2b8,#8c6a24)]" aria-hidden />
           <div className="mx-auto grid h-[72px] max-w-7xl grid-cols-[1fr_auto_1fr] items-center px-5 sm:px-8">
-            <nav className="hidden items-center gap-9 lg:flex" aria-label="Primary left">
+            <nav className="hidden items-center gap-2 lg:flex" aria-label="Primary left">
               {LEFT.map((item) => (
                 <NavLink
                   key={item.href}
@@ -90,8 +95,8 @@ export function Header() {
               <Logo />
             </Link>
 
-            <div className="hidden items-center justify-end gap-9 lg:flex">
-              <nav className="flex items-center gap-9" aria-label="Primary right">
+            <div className="hidden items-center justify-end gap-5 lg:flex">
+              <nav className="flex items-center gap-2" aria-label="Primary right">
                 {RIGHT.map((item) => (
                   <NavLink
                     key={item.href}

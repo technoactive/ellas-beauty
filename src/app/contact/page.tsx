@@ -65,7 +65,7 @@ export default function ContactPage() {
                 Open maps
               </a>
             </div>
-            <div className="mt-8 overflow-hidden rounded-[1.4rem]">
+            <div className="gold-frame mt-8">
               <iframe
                 title={`Map of ${SITE.name}`}
                 src={SITE.mapsEmbed}
