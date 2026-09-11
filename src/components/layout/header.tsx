@@ -120,7 +120,7 @@ export function Header() {
         <div className="bg-ivory/92 backdrop-blur-md">
           <TopBar />
           <div className="h-[3px] bg-[linear-gradient(90deg,#8c6a24,#e8d5a3,#c4a056,#f3e2b8,#8c6a24)]" aria-hidden />
-          <div className="mx-auto grid h-[72px] max-w-7xl grid-cols-[1fr_auto_1fr] items-center px-5 sm:px-8">
+          <div className="mx-auto grid h-20 max-w-7xl grid-cols-[1fr_auto_1fr] items-center px-5 sm:px-8">
             <nav className="hidden items-center gap-2 lg:flex" aria-label="Primary left">
               {LEFT.map((item) => (
                 <NavLink
@@ -137,7 +137,7 @@ export function Header() {
               aria-label={`${SITE.name} home`}
               className="col-start-2 justify-self-center"
             >
-              <Logo />
+              <Logo priority />
             </Link>
 
             <div className="hidden items-center justify-end gap-5 lg:flex">

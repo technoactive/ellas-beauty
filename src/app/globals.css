@@ -8,8 +8,8 @@
   --ink-soft: #3d3428;
   --muted: #6d6254;
   --line: rgba(166, 129, 58, 0.45);
-  /* top bar 34px + gold bar 3px + nav row 72px + hairline 1px */
-  --header-h: 110px;
+  /* top bar 34px + gold bar 3px + nav row 80px + hairline 1px */
+  --header-h: 118px;
   --gold: #c4a056;
   --gold-deep: #8c6a24;
   --gold-light: #e8d5a3;

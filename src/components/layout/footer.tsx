@@ -19,7 +19,7 @@ export function Footer() {
       <div className="mx-auto h-[3px] max-w-7xl rounded-full bg-[linear-gradient(90deg,transparent,#c4a056,#f3e2b8,#8c6a24,transparent)]" aria-hidden />
       <Container className="grid gap-14 py-20 lg:grid-cols-12">
         <div className="lg:col-span-5">
-          <Logo size="lg" className="items-start" />
+          <Logo size="lg" className="-ml-1" />
           <p className="mt-4 font-serif text-xl italic text-gold-deep">
             {SITE.strapline}
           </p>
