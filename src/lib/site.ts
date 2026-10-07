@@ -10,6 +10,13 @@ export const SITE = {
   description:
     "Award-winning luxury lashes, brows, skin and makeup in West Hampstead. Over 15 years of hands-on artistry by Ella, in salon at Rush Salon or mobile across London.",
   email: "contact@ellas-beauty.co.uk",
+  /** Transactional email identities (domain verified in Resend). */
+  mail: {
+    /** Automated notifications from the website → Ella’s inbox. */
+    website: { name: "Ella’s Beauty Website", address: "website@ellas-beauty.co.uk" },
+    /** Ella’s inbox; also the sender clients see on acknowledgements. */
+    contact: { name: "Ella’s Beauty", address: "contact@ellas-beauty.co.uk" },
+  },
   phone: {
     display: "+44 7523 140023",
     href: "tel:+447523140023",

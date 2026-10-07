@@ -1,36 +1,33 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Ella’s Beauty — ellas-beauty.co.uk
 
-## Getting Started
+Marketing site for Ella’s Beauty (lashes, brows, skin & make-up, West Hampstead / mobile across London). Built with Next.js 16 (App Router), React 19, Tailwind CSS v4 and `motion`.
 
-First, run the development server:
+## Develop
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install
+cp .env.example .env.local   # then fill in the keys below
+npm run dev                  # http://localhost:3000
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+`npm run lint`, `npx tsc --noEmit` and `npm run build` should all pass before pushing.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Environment
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+| Variable         | Purpose                                                                 |
+| ---------------- | ----------------------------------------------------------------------- |
+| `RESEND_API_KEY` | Sends the contact-form emails via [Resend](https://resend.com). Required in production. |
 
-## Learn More
+The sending domain `ellas-beauty.co.uk` is verified in Resend.
 
-To learn more about Next.js, take a look at the following resources:
+## Contact form email flow
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+1. A client submits the form on `/contact` → server action `src/app/contact/actions.ts` (validation, honeypot, light rate-limit).
+2. **Enquiry → Ella**: sent from `Ella’s Beauty Website <website@ellas-beauty.co.uk>` to `contact@ellas-beauty.co.uk`, with *reply-to* set to the client so Ella can answer straight from her inbox.
+3. **Acknowledgement → client**: sent from `Ella’s Beauty <contact@ellas-beauty.co.uk>`; copy adapts to the enquiry type (booking, bridal & events, mobile, academy, other).
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Templates live in `src/lib/email/templates.ts` (branded HTML + plain-text); sender identities are in `SITE.mail` (`src/lib/site.ts`).
 
-## Deploy on Vercel
+## Content
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+All business copy, contact details, treatments, reviews, awards and photos are configured in `src/lib/` (`site.ts`, `services.ts`, `reviews.ts`, `faq.ts`). Optimised images live in `public/images/`; the brand monogram in `public/brand/`.
