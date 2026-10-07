@@ -54,7 +54,7 @@ export function ServicesWheel() {
         <div className="lg:col-span-8">
           <Eyebrow>The menu, in motion</Eyebrow>
           <h2 className="mt-5 font-serif text-4xl leading-[1.02] sm:text-6xl">
-            Seventeen ways to{" "}
+            Eighteen ways to{" "}
             <span className="gold-text italic">let your eyes</span> do the
             talking.
           </h2>

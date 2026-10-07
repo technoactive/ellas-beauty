@@ -1,7 +1,7 @@
 import { Star } from "lucide-react";
 import { Marquee } from "@/components/magicui/marquee";
 import { Container, Eyebrow, Section } from "@/components/ui/section";
-import { reviews, type Review } from "@/lib/reviews";
+import { featuredReviews, SOURCE_LABEL, type Review } from "@/lib/reviews";
 import { SITE } from "@/lib/site";
 
 function ReviewCard({
@@ -11,7 +11,6 @@ function ReviewCard({
   review: Review;
   index: number;
 }) {
-  const academy = review.kind === "academy";
   return (
     <figure className="gold-panel flex w-[22rem] shrink-0 flex-col justify-between rounded-3xl p-7 shadow-[0_20px_50px_-30px_rgba(140,106,36,0.5)] sm:w-[24rem]">
       <div>
@@ -21,7 +20,7 @@ function ReviewCard({
           </span>
           <span className="flex items-center gap-3">
             <span className="text-[0.56rem] tracking-[0.28em] text-gold-deep uppercase">
-              {academy ? "Academy praise" : "Client love"}
+              {SOURCE_LABEL[review.source]}
             </span>
             <span className="flex gap-0.5" aria-label="5 star rating">
               {Array.from({ length: 5 }).map((_, i) => (
@@ -55,22 +54,29 @@ export function ReviewsPreview() {
             <span className="italic">and a reputation for patience.</span>
           </h2>
         </div>
-        <p className="text-[0.62rem] tracking-[0.3em] text-gold-deep uppercase lg:col-span-4 lg:text-right">
-          Verified on Fresha, Treatwell &amp;{" "}
-          <a
-            href={SITE.social.google.url}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="border-b border-gold/50 pb-0.5 hover:text-ink"
-          >
-            Google
-          </a>
-        </p>
+        <ul className="flex flex-wrap gap-3 lg:col-span-4 lg:justify-end">
+          {SITE.reviewPlatforms.map((platform) => (
+            <li key={platform.key}>
+              <a
+                href={platform.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="gold-panel inline-flex items-center gap-2 rounded-full px-4 py-2 text-[0.62rem] tracking-[0.26em] text-gold-deep uppercase transition-colors hover:text-ink"
+              >
+                <Star className="size-3 fill-gold text-gold" aria-hidden />
+                <span className="font-semibold text-ink">{platform.rating}</span>
+                <span>
+                  on {platform.label} · {platform.count}
+                </span>
+              </a>
+            </li>
+          ))}
+        </ul>
       </Container>
       <div className="relative mt-14">
-        <Marquee pauseOnHover repeat={2} className="[--duration:110s] [--gap:1.5rem] p-0">
-          {reviews.map((review, index) => (
-            <ReviewCard key={review.name} index={index} review={review} />
+        <Marquee pauseOnHover repeat={2} className="[--duration:160s] [--gap:1.5rem] p-0">
+          {featuredReviews.map((review, index) => (
+            <ReviewCard key={`${review.source}-${index}`} index={index} review={review} />
           ))}
         </Marquee>
         <div className="pointer-events-none absolute inset-y-0 left-0 w-24 bg-linear-to-r from-ivory to-transparent" />

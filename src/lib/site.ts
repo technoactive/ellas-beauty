@@ -9,16 +9,34 @@ export const SITE = {
   strapline: "Your lash, brow, skin specialist & make-up artist.",
   description:
     "Award-winning luxury lashes, brows, skin and makeup in West Hampstead. Over 15 years of hands-on artistry by Ella, in salon at Rush Salon or mobile across London.",
-  email: "contact@ellas-beauty.uk",
+  email: "contact@ellas-beauty.co.uk",
   phone: {
-    display: "+44 7523 240023",
-    href: "tel:+447523240023",
-    e164: "+447523240023",
+    display: "+44 7523 140023",
+    href: "tel:+447523140023",
+    e164: "+447523140023",
   },
   bookingUrl:
     "https://www.fresha.com/en-GB/a/ellas-beauty-london-rush-hair-west-hampstead-186-188-west-end-lane-qq4f1g83?pId=1332797",
+  /** Combined rating shown in the hero, review headings and schema. */
   rating: 4.9,
-  reviewCount: 79,
+  reviewCount: 171,
+  /** Per-platform ratings — Google Business Profile and Fresha. */
+  reviewPlatforms: [
+    {
+      key: "google",
+      label: "Google",
+      rating: "5.0",
+      count: 89,
+      url: "https://www.google.com/maps/search/?api=1&query=Ella%E2%80%99s%20Beauty%20Rush%20Hair%20West%20Hampstead%20186-188%20West%20End%20Lane%20NW6%201SG",
+    },
+    {
+      key: "fresha",
+      label: "Fresha",
+      rating: "4.9",
+      count: 82,
+      url: "https://www.fresha.com/en-GB/a/ellas-beauty-london-rush-hair-west-hampstead-186-188-west-end-lane-qq4f1g83?pId=1332797",
+    },
+  ],
   social: {
     instagram: {
       label: "Instagram",
@@ -66,27 +84,27 @@ export const SITE = {
   promises: [
     {
       title: "A confidence boost that lasts",
-      body: "Results designed to still look expensive on week three, not just on the day.",
+      body: "Results designed to look beautiful beyond the appointment.",
     },
     {
       title: "Luxury-level service",
-      body: "A calm chair, unhurried appointments and the care reviewers call patient.",
+      body: "Unhurried appointments, thoughtful attention and a personalised approach from start to finish.",
     },
     {
       title: "Effortless beauty, every day",
-      body: "Lashes, brows and skin that let you wake up ready — no mascara required.",
+      body: "Lashes, brows and skin that leave you looking fresh, polished and ready to go. Makeup optional.",
     },
     {
-      title: "Advanced techniques & premium products",
-      body: "Fine-diameter, organic Russian-made lashes and the newest mapping methods.",
+      title: "Advanced techniques. Premium products.",
+      body: "Carefully selected professional products and modern techniques, tailored to you.",
     },
     {
-      title: "Expert-led education",
-      body: "Honest advice on what suits your eyes, plus an Academy training future artists.",
+      title: "Personalised, never one-size-fits-all",
+      body: "Every treatment is adapted to your features, preferences and the result you want.",
     },
     {
       title: "A moment just for you",
-      body: "Ninety minutes of quiet, music and hands that treat your face as their own.",
+      body: "Time to switch off, slow down and leave feeling beautifully refreshed.",
     },
   ],
   /** The four facts shown straight after the hero. */
@@ -382,9 +400,15 @@ export const WORK = {
     name: "Lash lift",
     href: "/services/lashes",
   },
+  classicLashes: {
+    src: "/images/work/classic-lashes.jpg",
+    alt: "Classic lash extensions by Ella’s Beauty — one-to-one, natural, mascara-look set",
+    name: "Classic lashes",
+    href: "/services/lashes",
+  },
   hybridLashes: {
     src: "/images/work/hybrid-lashes.jpg",
-    alt: "Hybrid lash extensions by Ella’s Beauty — soft, textured, natural-looking set",
+    alt: "Hybrid lash extensions by Ella’s Beauty — classic and volume mixed for soft texture, with bold brows",
     name: "Hybrid lashes",
     href: "/services/lashes",
   },
@@ -402,25 +426,25 @@ export const WORK = {
   },
   kendallLashes: {
     src: "/images/work/kendall-lashes.jpg",
-    alt: "Kendall cat-eye lash extensions by Ella’s Beauty — elongated outer corner",
+    alt: "Kendall lash extensions by Ella’s Beauty — fluffy cat-eye set, close-up before and after",
     name: "Kendall lashes",
     href: "/services/lashes",
   },
   kimKLashes: {
     src: "/images/work/kim-k-lashes.jpg",
-    alt: "Kim K lash extensions by Ella’s Beauty — wispy spikes on a volume base",
+    alt: "Kim K lash extensions by Ella’s Beauty — long wispy spikes on a soft volume base",
     name: "Kim K lashes",
     href: "/services/lashes",
   },
   wispyLashes: {
     src: "/images/work/wispy-lashes.jpg",
-    alt: "Wispy lash extensions by Ella’s Beauty — feathered, textured spikes",
+    alt: "Wispy lash extensions by Ella’s Beauty — feathered spikes with a sculpted brow",
     name: "Wispy lashes",
     href: "/services/lashes",
   },
   customLashes: {
     src: "/images/work/custom-lashes.jpg",
-    alt: "Custom-mapped lash extensions by Ella’s Beauty — light, natural set on fair lashes",
+    alt: "Custom-mapped lash extensions by Ella’s Beauty — dramatic set styled to the eye shape",
     name: "Custom lashes",
     href: "/services/lashes",
   },
@@ -466,6 +490,13 @@ export const WORK = {
     name: "Swarovski details",
     href: "/services/lashes",
   },
+  /** Ella’s chosen principal image — used in the hero only. */
+  signatureLook: {
+    src: "/images/work/signature-look.jpg",
+    alt: "Two models with lashes, brows and glowing skin by Ella’s Beauty — the signature look",
+    name: "The signature look",
+    href: "/services",
+  },
 } as const;
 
 /** Order of the treatments wheel on the homepage. */
@@ -473,6 +504,7 @@ export const SERVICE_WHEEL = [
   WORK.browLamination,
   WORK.browHenna,
   WORK.lashLift,
+  WORK.classicLashes,
   WORK.hybridLashes,
   WORK.russianVolume,
   WORK.megaVolume,
@@ -490,7 +522,7 @@ export const SERVICE_WHEEL = [
 ] as const;
 
 export const IMAGES = {
-  hero: WORK.classicMakeup,
+  hero: WORK.signatureLook,
   lashes: WORK.russianVolume,
   brows: WORK.browLamination,
   makeup: WORK.complexMakeup,

@@ -25,9 +25,9 @@ export function Hero() {
       />
       <span
         aria-hidden
-        className="pointer-events-none absolute -left-4 top-24 select-none font-script text-[11rem] leading-none text-gold/20 sm:text-[18rem] lg:text-[24rem]"
+        className="pointer-events-none absolute -left-2 top-28 select-none whitespace-nowrap font-script text-[6.5rem] leading-none text-gold/20 sm:text-[11rem] lg:text-[15rem]"
       >
-        Ella
+        Ella’s Beauty
       </span>
 
       <Container className="relative pt-14 pb-16 sm:pt-20 lg:pt-24 lg:pb-24">
@@ -60,7 +60,7 @@ export function Hero() {
                 <BookButton />
                 <p className="flex items-center gap-2 text-xs tracking-wide text-muted">
                   <Star className="size-3.5 fill-gold text-gold" aria-hidden />
-                  {SITE.rating} · {SITE.reviewCount} verified reviews
+                  {SITE.rating} · {SITE.reviewCount} reviews on Google &amp; Fresha
                 </p>
               </div>
             </div>
