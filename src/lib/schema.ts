@@ -26,6 +26,7 @@ export function beautySalonJsonLd() {
     legalName: SITE.legalName,
     url: SITE.url,
     image: [`${SITE.url}/opengraph-image`],
+    logo: `${SITE.url}/icon.png`,
     description: SITE.description,
     email: SITE.email,
     telephone: SITE.phone.e164,

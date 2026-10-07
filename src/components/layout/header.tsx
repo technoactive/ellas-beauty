@@ -135,7 +135,7 @@ export function Header() {
             <Link
               href="/"
               aria-label={`${SITE.name} home`}
-              className="col-start-2 justify-self-center"
+              className="col-start-1 justify-self-start lg:col-start-2 lg:justify-self-center"
             >
               <Logo priority />
             </Link>

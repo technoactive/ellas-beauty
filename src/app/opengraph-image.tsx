@@ -9,8 +9,8 @@ export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
 export default async function OpenGraphImage() {
-  const logo = await readFile(join(process.cwd(), "public/brand/logo.png"));
-  const logoSrc = `data:image/png;base64,${logo.toString("base64")}`;
+  const mark = await readFile(join(process.cwd(), "public/brand/mark.png"));
+  const markSrc = `data:image/png;base64,${mark.toString("base64")}`;
 
   return new ImageResponse(
     (
@@ -85,13 +85,34 @@ export default async function OpenGraphImage() {
               mobile across London.
             </div>
           </div>
-          <img
-            src={logoSrc}
-            alt=""
-            width={500}
-            height={247}
-            style={{ width: 500, height: 247 }}
-          />
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "center",
+              gap: 28,
+              width: 440,
+            }}
+          >
+            <img
+              src={markSrc}
+              alt=""
+              width={262}
+              height={300}
+              style={{ width: 262, height: 300 }}
+            />
+            <div
+              style={{
+                display: "flex",
+                fontSize: 30,
+                letterSpacing: 12,
+                color: "#8c6a24",
+                textTransform: "uppercase",
+              }}
+            >
+              Ella’s Beauty
+            </div>
+          </div>
         </div>
         <div
           style={{
