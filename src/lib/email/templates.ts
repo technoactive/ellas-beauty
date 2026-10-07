@@ -188,14 +188,14 @@ export function enquiryNotification(enquiry: Enquiry) {
   const body = `
     ${eyebrow("New website enquiry")}
     ${heading(`${esc(typeLabel)} <span style="color:${C.goldDeep};font-style:italic;">from ${esc(enquiry.name)}</span>`)}
-    ${para(`A new message has arrived through the form on ${esc(SITE.domain)}. Reply to this email and your answer goes straight to ${esc(firstName(enquiry.name))}.`)}
+    ${para(`A new message has arrived through the form on ${esc(SITE.domain)}. Reply to this email and your answer goes straight to the client at <a href="mailto:${esc(enquiry.email)}" style="color:${C.goldDeep};">${esc(enquiry.email)}</a>.`)}
     <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="margin-top:10px;">
       ${rows}
     </table>
     ${rule()}
     ${eyebrow("Message")}
     <blockquote style="margin:0;padding:18px 22px;border-left:3px solid ${C.gold};background:${C.ivory};border-radius:0 18px 18px 0;font-family:${SERIF};font-size:19px;line-height:1.55;color:${C.ink};">${nl2br(enquiry.message)}</blockquote>
-    ${button(`Reply to ${firstName(enquiry.name)}`, mailto)}
+    ${button(`Reply to ${enquiry.name}`, mailto)}
   `;
 
   const html = shell({
